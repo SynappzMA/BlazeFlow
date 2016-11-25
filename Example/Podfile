@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'BlazeFlow_Example' do
+  pod 'BlazeFlow', :path => '../'
+
+  target 'BlazeFlow_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
