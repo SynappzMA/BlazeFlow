@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="86" id="oh7-BV-dSD" customClass="BlazeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oh7-BV-dSD" id="9eB-PZ-GS6">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_Section_Mid" translatesAutoresizingMaskIntoConstraints="NO" id="R22-od-4eA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iWl-Bc-Bb6">
+                        <rect key="frame" x="18" y="0.0" width="339" height="85"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="lJC-2M-CFn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                        <color key="textColor" red="0.14117647059999999" green="0.16862745100000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="R22-od-4eA" firstAttribute="top" secondItem="9eB-PZ-GS6" secondAttribute="top" id="22A-0b-R0h"/>
+                    <constraint firstAttribute="bottom" secondItem="R22-od-4eA" secondAttribute="bottom" id="2Tm-fL-7hL"/>
+                    <constraint firstAttribute="bottom" secondItem="iWl-Bc-Bb6" secondAttribute="bottom" id="5BF-uJ-Iar"/>
+                    <constraint firstItem="R22-od-4eA" firstAttribute="leading" secondItem="9eB-PZ-GS6" secondAttribute="leading" id="j81-gb-Qh6"/>
+                    <constraint firstAttribute="trailing" secondItem="iWl-Bc-Bb6" secondAttribute="trailing" constant="18" id="jrc-OK-U1e"/>
+                    <constraint firstAttribute="trailing" secondItem="R22-od-4eA" secondAttribute="trailing" id="ohV-VH-tx2"/>
+                    <constraint firstItem="iWl-Bc-Bb6" firstAttribute="top" secondItem="9eB-PZ-GS6" secondAttribute="top" id="ooL-a4-5ym"/>
+                    <constraint firstItem="iWl-Bc-Bb6" firstAttribute="leading" secondItem="9eB-PZ-GS6" secondAttribute="leading" constant="18" id="xkT-ps-XTU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="titleLabel" destination="iWl-Bc-Bb6" id="YbY-8W-Su0"/>
+            </connections>
+            <point key="canvasLocation" x="-155.5" y="-315"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Card_Section_Mid" width="36" height="15"/>
+    </resources>
+</document>

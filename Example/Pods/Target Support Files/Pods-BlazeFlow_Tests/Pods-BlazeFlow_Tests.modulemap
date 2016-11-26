@@ -1,0 +1,6 @@
+framework module Pods_BlazeFlow_Tests {
+  umbrella header "Pods-BlazeFlow_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

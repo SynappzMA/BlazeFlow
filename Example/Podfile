@@ -1,12 +1,14 @@
+platform :ios, '8.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'BlazeFlow_Example' do
-  pod 'BlazeFlow', :path => '../'
-
-  target 'BlazeFlow_Tests' do
-    inherit! :search_paths
-
-    pod 'Specta'
-  pod 'Expecta'
-  end
+    pod 'Blaze'
+    
+    target 'BlazeFlow_Tests' do
+        inherit! :search_paths
+        
+        pod 'Specta'
+        pod 'Expecta'
+    end
 end

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="15" id="Uv5-SF-7cw" customClass="BlazeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="15"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uv5-SF-7cw" id="qSi-I4-L7q">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_Section_Mid" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-f2-ELy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="14"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WSZ-f2-ELy" firstAttribute="top" secondItem="qSi-I4-L7q" secondAttribute="top" id="9G6-4A-cRk"/>
+                    <constraint firstAttribute="bottom" secondItem="WSZ-f2-ELy" secondAttribute="bottom" id="MSn-Yt-1Y8"/>
+                    <constraint firstAttribute="trailing" secondItem="WSZ-f2-ELy" secondAttribute="trailing" id="NEL-hy-bge"/>
+                    <constraint firstItem="WSZ-f2-ELy" firstAttribute="leading" secondItem="qSi-I4-L7q" secondAttribute="leading" id="YG1-5k-oRT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-219.5" y="-51.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Card_Section_Mid" width="36" height="15"/>
+    </resources>
+</document>

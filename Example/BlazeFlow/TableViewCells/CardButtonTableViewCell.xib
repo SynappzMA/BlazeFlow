@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="68" id="lup-Kd-638" customClass="BlazeTextFieldTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lup-Kd-638" id="m9J-LB-kxi">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_Section_Mid" translatesAutoresizingMaskIntoConstraints="NO" id="K8a-zw-aHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="15"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8k-mv-Ndr">
+                        <rect key="frame" x="40" y="13" width="295" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="P1F-Hc-Cww"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" red="0.35294117650000001" green="0.68235294120000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.35294117650000001" green="0.68235294120000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="K8a-zw-aHt" secondAttribute="trailing" id="BIj-jB-zHg"/>
+                    <constraint firstAttribute="bottom" secondItem="O8k-mv-Ndr" secondAttribute="bottom" constant="13" id="D3c-6c-0SQ"/>
+                    <constraint firstItem="O8k-mv-Ndr" firstAttribute="leading" secondItem="m9J-LB-kxi" secondAttribute="leading" constant="40" id="GJO-pb-eBb"/>
+                    <constraint firstItem="O8k-mv-Ndr" firstAttribute="centerX" secondItem="m9J-LB-kxi" secondAttribute="centerX" id="H6a-GC-3gp"/>
+                    <constraint firstItem="K8a-zw-aHt" firstAttribute="leading" secondItem="m9J-LB-kxi" secondAttribute="leading" id="PdY-Hy-Hr5"/>
+                    <constraint firstItem="O8k-mv-Ndr" firstAttribute="top" secondItem="m9J-LB-kxi" secondAttribute="top" constant="13" id="URl-0b-fGy"/>
+                    <constraint firstItem="K8a-zw-aHt" firstAttribute="bottom" secondItem="m9J-LB-kxi" secondAttribute="bottom" id="WlB-9A-CQa"/>
+                    <constraint firstAttribute="trailing" secondItem="O8k-mv-Ndr" secondAttribute="trailing" constant="40" id="gSB-hf-9hB"/>
+                    <constraint firstItem="K8a-zw-aHt" firstAttribute="top" secondItem="m9J-LB-kxi" secondAttribute="top" id="mZo-XY-X1X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="buttonCenter" destination="O8k-mv-Ndr" id="Ie4-yi-xwQ"/>
+            </connections>
+            <point key="canvasLocation" x="-156.5" y="-188"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Card_Section_Mid" width="36" height="15"/>
+    </resources>
+</document>

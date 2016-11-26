@@ -1,0 +1,27 @@
+{
+  "name": "BlazeFlow",
+  "version": "0.1.0",
+  "summary": "A short description of BlazeFlow.",
+  "description": "This is a very long description dummy text",
+  "homepage": "https://github.com/rajderks/BlazeFlow",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Roy Derks": "rajderks@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rajderks/BlazeFlow.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BlazeFlow/Classes/**/*",
+  "dependencies": {
+    "Blaze": [
+
+    ]
+  }
+}

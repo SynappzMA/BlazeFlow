@@ -1,0 +1,6 @@
+framework module Pods_BlazeFlow_Example {
+  umbrella header "Pods-BlazeFlow_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
