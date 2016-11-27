@@ -30,14 +30,12 @@
 		B0CF2BCE1DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC71DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib */; };
 		B0CF2BCF1DEA125F004FC2C4 /* CardTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC81DEA125F004FC2C4 /* CardTitleTableViewCell.xib */; };
 		B0CF2BD01DEA125F004FC2C4 /* CardTopSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */; };
-		C120F51B92FFED685E44F8EF /* Pods_BlazeFlow_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5A38CCDEFFF04E0ECAA6AF /* Pods_BlazeFlow_Example.framework */; };
+		C425F645E997B2D1AFAA5CF6 /* Pods_BlazeFlow_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16CD324A9ADBA1FB6A5545D9 /* Pods-BlazeFlow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Tests/Pods-BlazeFlow_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1F41043585A0103B9A26EDAA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4746CA66C44EA4F204F8F6E8 /* Pods-BlazeFlow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Tests/Pods-BlazeFlow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BlazeFlow_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,10 +46,8 @@
 		6003F59C195388D20070C39A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		60FF3B682760593155D7031A /* BlazeFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlazeFlow.podspec; path = ../BlazeFlow.podspec; sourceTree = "<group>"; };
-		6495FCA4DCCA7E9322689235 /* Pods_BlazeFlow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C5A38CCDEFFF04E0ECAA6AF /* Pods_BlazeFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B0CF2B841DE836D8004FC2C4 /* BlazeFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlow.h; sourceTree = "<group>"; };
 		B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlow.m; sourceTree = "<group>"; };
@@ -86,7 +82,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				C120F51B92FFED685E44F8EF /* Pods_BlazeFlow_Example.framework in Frameworks */,
+				C425F645E997B2D1AFAA5CF6 /* Pods_BlazeFlow_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +115,7 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				6C5A38CCDEFFF04E0ECAA6AF /* Pods_BlazeFlow_Example.framework */,
-				6495FCA4DCCA7E9322689235 /* Pods_BlazeFlow_Tests.framework */,
+				63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,8 +203,6 @@
 			children = (
 				34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */,
 				F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */,
-				4746CA66C44EA4F204F8F6E8 /* Pods-BlazeFlow_Tests.debug.xcconfig */,
-				16CD324A9ADBA1FB6A5545D9 /* Pods-BlazeFlow_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -378,7 +370,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -424,7 +415,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -463,12 +453,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEFINES_MODULE = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "BlazeFlow/BlazeFlow-Info.plist";
 				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
@@ -481,12 +467,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEFINES_MODULE = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "BlazeFlow/BlazeFlow-Info.plist";
 				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
