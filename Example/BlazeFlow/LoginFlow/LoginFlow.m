@@ -7,6 +7,7 @@
 //
 
 #import "User.h"
+#import "BlazeTableViewController.h"
 #import "BlazeRow.h"
 #import "LoginFlow.h"
 #import "BlazeSection.h"
@@ -125,14 +126,14 @@
     row = [BlazeRow rowWithXibName:kCardTextFieldTableViewCell];
     row.placeholder = @"Email address";
     row.floatingTitle = @"Email";
-    row.floatingLabelEnabled = FloatingLabelStateEnabled;
+    row.floatingLabelEnabled = true;
     [row setAffectedObject:self.user affectedPropertyName:[self.user stringForPropertyName:@selector(email)]];
     [rows addObject:row];
     
     row = [BlazeRow rowWithXibName:kCardTextFieldTableViewCell];
     row.placeholder = @"Password";
     row.floatingTitle = @"Password";
-    row.floatingLabelEnabled = FloatingLabelStateEnabled;
+    row.floatingLabelEnabled = true;
     __block NSString *password = nil;
     __weak typeof(row) weakRow = row;
     row.valueChanged = ^{
@@ -185,7 +186,7 @@
     row = [BlazeRow rowWithXibName:kCardTextFieldTableViewCell];
     row.placeholder = @"Message";
     row.floatingTitle = @"Type a message";
-    row.floatingLabelEnabled = FloatingLabelStateEnabled;
+    row.floatingLabelEnabled = true;
     [rows addObject:row];
     
     row = [BlazeRow rowWithXibName:kCardButtonTableViewCell];

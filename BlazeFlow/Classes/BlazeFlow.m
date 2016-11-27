@@ -10,8 +10,6 @@
 
 @interface BlazeFlow()
 
-
-
 @end
 
 @implementation BlazeFlow

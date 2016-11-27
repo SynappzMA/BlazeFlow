@@ -4,11 +4,4 @@ inhibit_all_warnings!
 
 target 'BlazeFlow_Example' do
     pod 'Blaze'
-    
-    target 'BlazeFlow_Tests' do
-        inherit! :search_paths
-        
-        pod 'Specta'
-        pod 'Expecta'
-    end
 end
