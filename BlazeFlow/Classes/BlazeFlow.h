@@ -6,8 +6,8 @@
 //
 //
 
-@import Foundation;
-@import Blaze;
+#import <Foundation/Foundation.h>
+#import "BlazeTableViewController.h"
 
 @interface BlazeFlow : NSObject
 
