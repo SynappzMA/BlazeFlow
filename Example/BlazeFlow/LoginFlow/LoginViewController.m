@@ -35,6 +35,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [self.loginTableViewController removeObserver:self forKeyPath:@"currentState"];
 }
 
