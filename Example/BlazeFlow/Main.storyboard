@@ -59,6 +59,15 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRS-sN-MES">
+                                        <rect key="frame" x="300" y="-3" width="39" height="30"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeTapped" destination="IxD-84-Ag2" eventType="touchUpInside" id="280-d4-ZW1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -67,9 +76,11 @@
                                     <constraint firstItem="byo-pn-EPJ" firstAttribute="centerY" secondItem="dIS-Hz-faC" secondAttribute="centerY" id="BQh-MT-Vbb"/>
                                     <constraint firstItem="aDP-Wy-d4Q" firstAttribute="leading" secondItem="gIP-6M-MFk" secondAttribute="leading" id="L95-7q-Dzj"/>
                                     <constraint firstAttribute="height" constant="24" id="QJH-aU-AwK"/>
+                                    <constraint firstAttribute="trailing" secondItem="yRS-sN-MES" secondAttribute="trailing" constant="36" id="Ub7-9t-Xac"/>
                                     <constraint firstItem="aDP-Wy-d4Q" firstAttribute="centerY" secondItem="gIP-6M-MFk" secondAttribute="centerY" id="WKd-ch-kJl"/>
                                     <constraint firstItem="dIS-Hz-faC" firstAttribute="leading" secondItem="gIP-6M-MFk" secondAttribute="leading" constant="20" id="bk8-Ew-lvt"/>
                                     <constraint firstItem="aDP-Wy-d4Q" firstAttribute="trailing" secondItem="byo-pn-EPJ" secondAttribute="trailing" constant="15" id="uKS-23-4zF"/>
+                                    <constraint firstItem="yRS-sN-MES" firstAttribute="centerY" secondItem="gIP-6M-MFk" secondAttribute="centerY" id="vPX-cy-ynq"/>
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Wys-LW-hqt">
@@ -97,6 +108,7 @@
                         <outlet property="arrowImageView" destination="dIS-Hz-faC" id="UkT-vS-4VB"/>
                         <outlet property="backContainerView" destination="gIP-6M-MFk" id="qXw-0M-rk7"/>
                         <outlet property="backLabel" destination="byo-pn-EPJ" id="DfZ-mA-lHH"/>
+                        <outlet property="closeButton" destination="yRS-sN-MES" id="yY6-8I-1Lb"/>
                         <outlet property="containerView" destination="bqG-o0-V5m" id="7od-M6-I7F"/>
                         <outlet property="pageControl" destination="Wys-LW-hqt" id="iUg-Rc-gM1"/>
                     </connections>

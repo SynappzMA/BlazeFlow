@@ -9,6 +9,7 @@
 @import Blaze;
 
 #import "BlazeFlow.h"
+#import "BlazeFlowTableViewController.h"
 
 
 @interface BlazeFlow()
@@ -17,7 +18,16 @@
 
 @implementation BlazeFlow
 
+#pragma mark Properties
+
+-(void)setBlazeFlowTableViewController:(BlazeFlowTableViewController *)blazeFlowTableViewController
+{
+    _blazeFlowTableViewController = blazeFlowTableViewController;
+    _blazeFlowTableViewController.blazeFlow = self;
+}
+
 #pragma mark State
+
 -(BOOL)isFirstState:(NSInteger)state
 {
     if(state <= 1 && (self.currentSkippableType == BlazeFlowSkippableTypeNone || self.currentSkippableType == BlazeFlowSkippableTypeDontSkip)) {
@@ -79,12 +89,10 @@
     }
 }
 
--(void)close
+-(BOOL)close
 {
     //To override
-    if(self.closedSuccesfully) {
-        self.closedSuccesfully(false);
-    }
+    return false;
 }
 
 -(BOOL)next
@@ -93,7 +101,7 @@
         return true;
     }
     self.currentState++;
-    [self.blazeTableViewController loadTableContent];
+    [self.blazeFlowTableViewController loadTableContent];
         
     CATransition *animation = [CATransition animation];
     [animation setType:kCATransitionPush];
@@ -101,8 +109,8 @@
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [animation setFillMode:kCAFillModeBoth];
     [animation setDuration:.3];
-    [[self.blazeTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
-    [self.blazeTableViewController.tableView reloadData];
+    [[self.blazeFlowTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
+    [self.blazeFlowTableViewController.tableView reloadData];
     
     return false;
 }
@@ -113,7 +121,7 @@
         return true;
     }
     self.currentState--;
-    [self.blazeTableViewController loadTableContent];
+    [self.blazeFlowTableViewController loadTableContent];
     
     CATransition *animation = [CATransition animation];
     [animation setType:kCATransitionPush];
@@ -121,8 +129,8 @@
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [animation setFillMode:kCAFillModeBoth];
     [animation setDuration:.3];
-    [[self.blazeTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
-    [self.blazeTableViewController.tableView reloadData];
+    [[self.blazeFlowTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
+    [self.blazeFlowTableViewController.tableView reloadData];
     
     return false;
 }
@@ -141,7 +149,7 @@
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_OK", nil) style:UIAlertActionStyleCancel handler:nil]];
-    [self.blazeTableViewController presentViewController:alertController animated:true completion:nil];
+    [self.blazeFlowTableViewController presentViewController:alertController animated:true completion:nil];
 }
 
 @end

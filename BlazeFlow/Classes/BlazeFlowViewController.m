@@ -60,7 +60,7 @@
 
 -(IBAction)closeTapped
 {
-    [self.blazeFlow close];
+    [self close];
 }
 
 -(void)stateFinished
@@ -77,10 +77,7 @@
 
 -(void)setupBlazeFlow
 {
-    self.pageControl.numberOfPages = self.blazeFlow.numberOfStates;
-    
-    self.blazeFlowTableViewController.blazeFlow  = self.blazeFlow;
-    self.blazeFlow.blazeTableViewController = self.blazeFlowTableViewController;
+    self.blazeFlow.blazeFlowTableViewController = self.blazeFlowTableViewController;
     
     __weak typeof(self) weakSelf = self;
     self.blazeFlow.stateFinished = ^() {
@@ -89,7 +86,6 @@
     self.blazeFlow.shouldDisplayaccessories = ^(NSInteger show) {
         [weakSelf shouldDisplayAccessories:show];
     };
-    
     [self.blazeFlow addObserver:self forKeyPath:@"currentState" options:NSKeyValueObservingOptionNew context:nil];
     self.blazeFlow.shouldDisplayaccessories(-1);
 }
@@ -134,6 +130,10 @@
     return [self.blazeFlow next];
 }
 
+-(BOOL)close
+{
+    return [self.blazeFlow close];
+}
 
 @end
 

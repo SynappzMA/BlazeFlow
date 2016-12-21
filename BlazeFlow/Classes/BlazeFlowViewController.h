@@ -90,17 +90,24 @@
 -(void)shouldDisplayAccessories:(NSInteger)show;
 
 /**
- Method called when the backButton has been hit.
+ Method called when the backButton has been tapped.
 
  @return BOOL when the backButton was pressed while on the firstState
  */
 -(BOOL)previous;
 
 /**
- Method called when the backButton has been hit.
+ Method called when the backButton has been tapped.
  
  @return BOOL when next: message was sent to BlazeFlow while on the lastState
  */
 -(BOOL)next;
+
+/**
+ Method called when the close button has been tapped
+
+ @return YES when close: message was sent to BlazeFlow and disposing of and/or deactivating resources was successfull
+ */
+-(BOOL)close;
 
 @end

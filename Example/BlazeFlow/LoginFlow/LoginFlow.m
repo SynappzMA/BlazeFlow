@@ -7,7 +7,7 @@
 //
 
 #import "User.h"
-#import "BlazeTableViewController.h"
+#import "BlazeFlowTableViewController.h"
 #import "BlazeRow.h"
 #import "LoginFlow.h"
 #import "BlazeSection.h"
@@ -32,10 +32,10 @@
     return self;
 }
 
--(void)setBlazeTableViewController:(BlazeTableViewController *)blazeTableViewController
+-(void)setBlazeFlowTableViewController:(BlazeFlowTableViewController *)blazeFlowTableViewController
 {
-    super.blazeTableViewController = blazeTableViewController;
-    [blazeTableViewController registerCustomCells:@[
+    [super setBlazeFlowTableViewController:blazeFlowTableViewController];
+    [blazeFlowTableViewController registerCustomCells:@[
                                 kCardTitleTableViewCell,
                                 kCardTextFieldTableViewCell,
                                 kCardButtonTableViewCell,

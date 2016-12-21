@@ -50,6 +50,18 @@
     return result;
 }
 
+-(BOOL)close
+{
+    BOOL result = [super close];
+    if(result) {
+        //Do stuff
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Closing!" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:true completion:nil];
+    return result;
+}
+
 -(void)shouldDisplayAccessories:(NSInteger)show
 {
     NSTimeInterval duration = 0.25;

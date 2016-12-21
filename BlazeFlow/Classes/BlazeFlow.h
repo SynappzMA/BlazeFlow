@@ -8,7 +8,7 @@
 
 @import Foundation;
 
-@class BlazeTableViewController, BlazeSection, BlazeRow;
+@class BlazeFlowTableViewController, BlazeSection, BlazeRow;
 
 typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
     BlazeFlowSkippableTypeNone = 0,
@@ -40,15 +40,9 @@ typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
 @property(nonatomic,copy) void (^stateFinished)();
 
 /**
- Completion block when directly closing the BlazeFlow.
- param success YES if the disposing/deactivating of resource was finished succesfully, NO otherwise.
- */
-@property(nonatomic,copy) void (^closedSuccesfully)(BOOL success);
-
-/**
  The presented BlazeTableViewController embedded in BlazeFlowViewController
  */
-@property(nonatomic,strong) BlazeTableViewController *blazeTableViewController;
+@property(nonatomic,strong) BlazeFlowTableViewController *blazeFlowTableViewController;
 
 /**
  The currently applied BlazeFlowSkippableType
@@ -98,8 +92,7 @@ typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
 /**
  Close the BlazeFlow immediately independant of currentState. Dispose or deactive resources.
  */
--(void)close;
-
+-(BOOL)close;
 
 /**
  Present the next section in the flow.
