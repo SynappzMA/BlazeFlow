@@ -9,19 +9,9 @@
 #import "LoginFlow.h"
 #import "LoginViewController.h"
 #import "UIView+SimpleAnimations.h"
-#import "LoginFlowTableViewController.h"
+#import "BlazeFlowTableViewController.h"
 
 @interface LoginViewController ()
-
-@property(nonatomic,weak) IBOutlet UIButton *backButton;
-@property(nonatomic,weak) IBOutlet UILabel *backLabel;
-@property(nonatomic,weak) IBOutlet UIImageView *arrowImageView;
-@property(nonatomic,weak) IBOutlet UIView *backContainerView;
-
-@property(nonatomic,weak) IBOutlet UIPageControl *pageControl;
-@property(nonatomic,weak) IBOutlet UIView *containerView;
-
-@property(nonatomic,strong) LoginFlowTableViewController *loginTableViewController;
 
 @end
 
@@ -30,68 +20,64 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pageControl.numberOfPages = LoginStateDone;
 }
 
--(void)viewWillDisappear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
-    [self.loginTableViewController removeObserver:self forKeyPath:@"currentState"];
+    [super viewWillAppear:animated];
+    self.pageControl.numberOfPages -=1;
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     if([keyPath isEqualToString:@"currentState"]) {
-        self.pageControl.currentPage = MAX(0,[change[NSKeyValueChangeNewKey] integerValue]-1);
+        if(self.blazeFlow.currentSkippableType == BlazeFlowSkippableTypeSkip || self.blazeFlow.currentSkippableType == BlazeFlowSkippableTypePartialSkip){
+            self.pageControl.currentPage = MAX(0,[change[NSKeyValueChangeNewKey] integerValue]-self.blazeFlow.skippableTypeSkipFirstState-1);
+        } else {
+            self.pageControl.currentPage = MAX(0,[change[NSKeyValueChangeNewKey] integerValue]-2);
+        }
     }
 }
 
-#pragma mark - Actions
-
--(IBAction)previousTapped
+-(BOOL)next
 {
-    [self.loginTableViewController.loginFlow previous];
+    BOOL result = [super next];
+    if(result) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Last state reached!" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:true completion:nil];
+    }
+    return result;
 }
 
-#pragma mark - Navigation
+-(void)shouldDisplayAccessories:(NSInteger)show
+{
+    NSTimeInterval duration = 0.25;
+    switch (show) {
+        case -1:
+        case 0:
+        {
+            [self.backContainerView hideWithDuration:duration];
+            [self.pageControl hideWithDuration:duration];
+            break;
+        }
+        default:
+            [self.backContainerView showWithDuration:duration];
+            [self.pageControl showWithDuration:duration];
+            break;
+    }
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:NSStringFromClass([LoginFlowTableViewController class])]) {
-        self.loginTableViewController = segue.destinationViewController;
-        
-        self.loginTableViewController.loginFlow = [LoginFlow new];
-        self.loginTableViewController.loginFlow.blazeTableViewController = self.loginTableViewController;
-        
-        __weak typeof(self) weakSelf = self;
-        self.loginTableViewController.loginFlow.stateFinishedSuccesfully = ^() {
-            BOOL result = [weakSelf.loginTableViewController.loginFlow next];
-            if(result) {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Done!" preferredStyle:UIAlertControllerStyleAlert];
-                [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
-                [weakSelf presentViewController:alert animated:true completion:nil];
-            }
-        };
-        self.loginTableViewController.loginFlow.shouldDisplayAccessoires = ^(NSInteger show) {
-            if(show == -1) {
-                weakSelf.backContainerView.hidden =
-                weakSelf.pageControl.hidden = true;
-            }
-            else if(!show) {
-                NSTimeInterval duration = 0.25f;
-                [weakSelf.backContainerView hideWithDuration:duration];
-                [weakSelf.pageControl hideWithDuration:duration];
-            } else {
-                NSTimeInterval duration = 0.25f;
-                [weakSelf.backContainerView showWithDuration:duration];
-                [weakSelf.pageControl showWithDuration:duration];
-            }
-        };
-        
-        [self.loginTableViewController.loginFlow addObserver:self forKeyPath:@"currentState" options:NSKeyValueObservingOptionNew context:nil];
-        self.loginTableViewController.loginFlow.shouldDisplayAccessoires(-1);
-    }
+    self.blazeFlow = [LoginFlow new];
+    self.blazeFlow.numberOfStates = LoginStateDone;
+    //To test skipabillity uncomment comment block below
+    /*
+    self.blazeFlow.currentSkippableType = BlazeFlowSkippableTypeSkip;
+    self.blazeFlow.skippableTypeSkipFirstState = LoginStateName;
+    */
+    [super prepareForSegue:segue sender:sender];
 }
-
 
 @end

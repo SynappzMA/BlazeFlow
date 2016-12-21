@@ -76,22 +76,12 @@
     return section;
 }
 
--(BOOL)isFirstState:(NSInteger)state
-{
-    return self.currentState == LoginStateLogin;
-}
-
--(BOOL)isLastState:(NSInteger)state
-{
-    return self.currentState == LoginStateDone;
-}
-
 -(BOOL)next
 {
     BOOL result = [super next];
     if(self.currentState > LoginStateLogin) {
-        if(self.shouldDisplayAccessoires) {
-            self.shouldDisplayAccessoires(true);
+        if(self.shouldDisplayaccessories) {
+            self.shouldDisplayaccessories(true);
         }
     }
     return result;
@@ -100,9 +90,10 @@
 -(BOOL)previous
 {
     BOOL result = [super previous];
-    if(self.currentState == LoginStateLogin) {
-        if(self.shouldDisplayAccessoires) {
-            self.shouldDisplayAccessoires(false);
+    if(self.currentState <= LoginStateLogin ||
+       (self.currentState <= self.skippableTypeSkipFirstState && (self.currentSkippableType == BlazeFlowSkippableTypeSkip || self.currentSkippableType == BlazeFlowSkippableTypePartialSkip))) {
+        if(self.shouldDisplayaccessories) {
+            self.shouldDisplayaccessories(false);
         }
     }
     return result;
@@ -153,19 +144,21 @@
     row = [BlazeRow rowWithXibName:kCardButtonTableViewCell];
     row.buttonCenterTitle = @"Login";
     row.buttonCenterTapped = ^{
-        if(!self.user.email.length) {
+        /*if(!self.user.email.length) {
             [self alertWithMessage:@"Please provide an email address"];
         } else if(!password.length) {
             [self alertWithMessage:@"Please provide a password"];
         }
         else {
-            if(self.stateFinishedSuccesfully) {
-                self.stateFinishedSuccesfully();
+            if(self.stateFinished) {
+                self.stateFinished();
             }
+        }*/
+        if(self.stateFinished) {
+            self.stateFinished();
         }
     };
     [rows addObject:row];
-    
     
     return rows;
 }
@@ -190,10 +183,10 @@
     [rows addObject:row];
     
     row = [BlazeRow rowWithXibName:kCardButtonTableViewCell];
-    row.buttonCenterTitle = @"Login";
+    row.buttonCenterTitle = @"Continue!";
     row.buttonCenterTapped = ^{
-        if(self.stateFinishedSuccesfully) {
-            self.stateFinishedSuccesfully();
+        if(self.stateFinished) {
+            self.stateFinished();
         }
     };
     [rows addObject:row];
@@ -216,8 +209,8 @@
     row = [BlazeRow rowWithXibName:kCardButtonTableViewCell];
     row.buttonCenterTitle = @"Forwards!";
     row.buttonCenterTapped = ^{
-        if(self.stateFinishedSuccesfully) {
-            self.stateFinishedSuccesfully();
+        if(self.stateFinished) {
+            self.stateFinished();
         }
     };
     [rows addObject:row];
@@ -240,8 +233,8 @@
     row = [BlazeRow rowWithXibName:kCardButtonTableViewCell];
     row.buttonCenterTitle = @"Done!";
     row.buttonCenterTapped = ^{
-        if(self.stateFinishedSuccesfully) {
-            self.stateFinishedSuccesfully();
+        if(self.stateFinished) {
+            self.stateFinished();
         }
     };
     [rows addObject:row];

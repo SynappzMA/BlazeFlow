@@ -15,11 +15,12 @@
 		6003F59E195388D20070C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B027A28E1E0A5349007703B9 /* BlazeFlowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */; };
+		B027A28F1E0A537D007703B9 /* BlazeFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */; };
 		B0CF2B861DE836D8004FC2C4 /* BlazeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */; };
 		B0CF2B981DEA0081004FC2C4 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2B971DEA0081004FC2C4 /* Launch.xib */; };
 		B0CF2BA91DEA02C8004FC2C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BAB1DEA02C8004FC2C4 /* Localizable.strings */; };
 		B0CF2BB31DEA11E4004FC2C4 /* LoginFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BAE1DEA11E4004FC2C4 /* LoginFlow.m */; };
-		B0CF2BB41DEA11E4004FC2C4 /* LoginFlowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BB01DEA11E4004FC2C4 /* LoginFlowTableViewController.m */; };
 		B0CF2BB51DEA11E4004FC2C4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BB21DEA11E4004FC2C4 /* LoginViewController.m */; };
 		B0CF2BC01DEA120D004FC2C4 /* UIView+SimpleAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BBD1DEA120D004FC2C4 /* UIView+SimpleAnimations.m */; };
 		B0CF2BC11DEA120D004FC2C4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BBF1DEA120D004FC2C4 /* User.m */; };
@@ -49,14 +50,16 @@
 		60FF3B682760593155D7031A /* BlazeFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlazeFlow.podspec; path = ../BlazeFlow.podspec; sourceTree = "<group>"; };
 		63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B027A2871E0A4CC8007703B9 /* BlazeFlowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowTableViewController.h; sourceTree = "<group>"; };
+		B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowTableViewController.m; sourceTree = "<group>"; };
+		B027A2891E0A4CC8007703B9 /* BlazeFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowViewController.h; sourceTree = "<group>"; };
+		B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowViewController.m; sourceTree = "<group>"; };
 		B0CF2B841DE836D8004FC2C4 /* BlazeFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlow.h; sourceTree = "<group>"; };
 		B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlow.m; sourceTree = "<group>"; };
 		B0CF2B971DEA0081004FC2C4 /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Launch.xib; sourceTree = "<group>"; };
 		B0CF2BAA1DEA02C8004FC2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0CF2BAD1DEA11E4004FC2C4 /* LoginFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFlow.h; sourceTree = "<group>"; };
 		B0CF2BAE1DEA11E4004FC2C4 /* LoginFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFlow.m; sourceTree = "<group>"; };
-		B0CF2BAF1DEA11E4004FC2C4 /* LoginFlowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFlowTableViewController.h; sourceTree = "<group>"; };
-		B0CF2BB01DEA11E4004FC2C4 /* LoginFlowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFlowTableViewController.m; sourceTree = "<group>"; };
 		B0CF2BB11DEA11E4004FC2C4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B0CF2BB21DEA11E4004FC2C4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B0CF2BBC1DEA120D004FC2C4 /* UIView+SimpleAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SimpleAnimations.h"; sourceTree = "<group>"; };
@@ -166,6 +169,10 @@
 			children = (
 				B0CF2B841DE836D8004FC2C4 /* BlazeFlow.h */,
 				B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */,
+				B027A2871E0A4CC8007703B9 /* BlazeFlowTableViewController.h */,
+				B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */,
+				B027A2891E0A4CC8007703B9 /* BlazeFlowViewController.h */,
+				B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */,
 			);
 			name = BlazeFlow;
 			path = ../BlazeFlow/Classes;
@@ -176,8 +183,6 @@
 			children = (
 				B0CF2BAD1DEA11E4004FC2C4 /* LoginFlow.h */,
 				B0CF2BAE1DEA11E4004FC2C4 /* LoginFlow.m */,
-				B0CF2BAF1DEA11E4004FC2C4 /* LoginFlowTableViewController.h */,
-				B0CF2BB01DEA11E4004FC2C4 /* LoginFlowTableViewController.m */,
 				B0CF2BB11DEA11E4004FC2C4 /* LoginViewController.h */,
 				B0CF2BB21DEA11E4004FC2C4 /* LoginViewController.m */,
 			);
@@ -335,12 +340,13 @@
 			files = (
 				B0CF2BC11DEA120D004FC2C4 /* User.m in Sources */,
 				B0CF2B861DE836D8004FC2C4 /* BlazeFlow.m in Sources */,
+				B027A28E1E0A5349007703B9 /* BlazeFlowTableViewController.m in Sources */,
+				B027A28F1E0A537D007703B9 /* BlazeFlowViewController.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				B0CF2BB51DEA11E4004FC2C4 /* LoginViewController.m in Sources */,
 				B0CF2BC01DEA120D004FC2C4 /* UIView+SimpleAnimations.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				B0CF2BB31DEA11E4004FC2C4 /* LoginFlow.m in Sources */,
-				B0CF2BB41DEA11E4004FC2C4 /* LoginFlowTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

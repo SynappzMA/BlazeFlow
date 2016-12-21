@@ -9,6 +9,7 @@
 #import "BlazeFlow.h"
 
 typedef NS_ENUM(NSInteger, LoginState) {
+    LoginStateNone = 0,
     LoginStateLogin,
     LoginStateName,
     LoginStateMessage,

@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import "BlazeFlowViewController.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : BlazeFlowViewController
 
 @end
