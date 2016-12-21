@@ -30,8 +30,6 @@
 
 -(BOOL)isLastState:(NSInteger)state
 {
-    NSLog(@"LastState : %ld", self.numberOfStates+self.skippableTypeSkipFirstState-1);
-    NSLog(@"test state : %ld", state);
     BOOL result = false;
     NSInteger calcState = state;
     if(state >= self.numberOfStates && (self.currentSkippableType == BlazeFlowSkippableTypeNone || self.currentSkippableType == BlazeFlowSkippableTypeDontSkip)) {
