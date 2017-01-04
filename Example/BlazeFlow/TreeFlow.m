@@ -14,6 +14,7 @@
 -(BlazeSection *)sectionForState:(NSInteger)state
 {
     BlazeSection *section = [BlazeSection new];
+    [section addRow:[BlazeRow rowWithXibName:@"CardTopSection"]];
     
     BlazeRow *row = [BlazeRow rowWithXibName:@"CardTitleTableViewCell"];
     row.title = [NSString stringWithFormat:@"This is state nr. %ld", state];
@@ -59,6 +60,7 @@
         [section addRow:x];
     }
     
+    [section addRow:[BlazeRow rowWithXibName:@"CardBottomSection"]];
     return section;
 }
 
