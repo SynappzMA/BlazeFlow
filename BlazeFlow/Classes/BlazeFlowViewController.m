@@ -26,34 +26,10 @@
     return self;
 }
 
--(void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.backLabel.text = NSLocalizedString(@"Navbar_Item_Cancel", nil);
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.pageControl.numberOfPages = self.blazeFlow.numberOfStates;
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    @try {
-        [self.blazeFlow removeObserver:self forKeyPath:@"currentState"];
-    } @catch (NSException *exception) {
-        NSLog(@"%@", exception.description);
-    }
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    if([keyPath isEqualToString:@"currentState"]) {
-        NSInteger currentState = [change[NSKeyValueChangeNewKey] integerValue];
-        self.backLabel.text = currentState == 1? NSLocalizedString(@"Navbar_Item_Cancel", nil):NSLocalizedString(@"Navbar_Item_Back", nil);
-        self.pageControl.currentPage = MAX(0,currentState-1);
-    }
 }
 
 #pragma mark IBActions
@@ -83,11 +59,9 @@
     self.blazeFlow.stateFinished = ^() {
         [weakSelf stateFinished];
     };
-    self.blazeFlow.shouldDisplayaccessories = ^(NSInteger show) {
-        [weakSelf shouldDisplayAccessories:show];
+    self.blazeFlow.currentStateChanged = ^(NSInteger currentState) {
+        [weakSelf currentStateChanged:currentState];
     };
-    [self.blazeFlow addObserver:self forKeyPath:@"currentState" options:NSKeyValueObservingOptionNew context:nil];
-    self.blazeFlow.shouldDisplayaccessories(-1);
 }
 
 #pragma mark Segue
@@ -103,6 +77,11 @@
 
 #pragma mark - Overridable methods
 
+-(void)currentStateChanged:(NSInteger)currentState
+{
+    //To override
+}
+
 -(void)stateFinishedSuccesfully
 {
     //To override
@@ -115,18 +94,11 @@
 
 -(BOOL)previous
 {
-    BOOL firstStateImminent = [self.blazeFlow isFirstState:self.blazeFlow.currentState-1];
-    if(firstStateImminent) {
-        self.backLabel.text = NSLocalizedString(@"Navbar_Item_Cancel", nil);
-    }
     return [self.blazeFlow previous];
 }
 
 -(BOOL)next
 {
-    if([self.backLabel.text isEqualToString:NSLocalizedString(@"Navbar_Item_Cancel", nil)]) {
-        self.backLabel.text = NSLocalizedString(@"Navbar_Item_Back", nil);
-    }
     return [self.blazeFlow next];
 }
 

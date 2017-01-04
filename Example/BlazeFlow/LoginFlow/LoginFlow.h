@@ -6,7 +6,7 @@
 //  Copyright © 2016 Roy Derks. All rights reserved.
 //
 
-#import "BlazeFlow.h"
+#import "BlazeFlowSkippable.h"
 
 typedef NS_ENUM(NSInteger, LoginState) {
     LoginStateNone = 0,
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, LoginState) {
 
 @class User;
 
-@interface LoginFlow : BlazeFlow
+@interface LoginFlow : BlazeFlowSkippable
 
 @property(nonatomic,strong) User *user;
 

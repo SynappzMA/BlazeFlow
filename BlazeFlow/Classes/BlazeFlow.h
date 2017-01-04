@@ -10,13 +10,6 @@
 
 @class BlazeFlowTableViewController, BlazeSection, BlazeRow;
 
-typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
-    BlazeFlowSkippableTypeNone = 0,
-    BlazeFlowSkippableTypeDontSkip = 1,
-    BlazeFlowSkippableTypeSkip = 2,
-    BlazeFlowSkippableTypePartialSkip = 3
-};
-
 @interface BlazeFlow : NSObject
 
 /**
@@ -30,9 +23,9 @@ typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
 @property(nonatomic,assign) NSInteger currentState;
 
 /**
- Block to inform the BlazeFlowViewController what kind of accessories should be displayed. Default implementation shows backButton and pageControl on 1, and hides both on 0.
- */                              
-@property(nonatomic,copy) void (^shouldDisplayaccessories)(NSInteger display);
+ Block to inform the BlazeFlowViewController that the currentState has been changed.
+ */
+@property(nonatomic,copy) void (^currentStateChanged)(NSInteger newState);
 
 /**
  Completion block when a state has finished. Default implementation in BlazeFlowViewController responds to this block with a next: message.
@@ -43,17 +36,6 @@ typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
  The presented BlazeTableViewController embedded in BlazeFlowViewController
  */
 @property(nonatomic,strong) BlazeFlowTableViewController *blazeFlowTableViewController;
-
-/**
- The currently applied BlazeFlowSkippableType
- */
-@property(nonatomic,assign) BlazeFlowSkippableType currentSkippableType;
-
-/**
- The first state for the currently applied BlaezFlowSkippableType
- */
-@property(nonatomic,assign) NSInteger skippableTypeSkipFirstState;
-
 
 /**
  @description Override this method to provide the BlazeFlowTableViewController with a dataSource.

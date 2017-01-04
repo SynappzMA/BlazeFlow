@@ -76,29 +76,6 @@
     return section;
 }
 
--(BOOL)next
-{
-    BOOL result = [super next];
-    if(self.currentState > LoginStateLogin) {
-        if(self.shouldDisplayaccessories) {
-            self.shouldDisplayaccessories(true);
-        }
-    }
-    return result;
-}
-
--(BOOL)previous
-{
-    BOOL result = [super previous];
-    if(self.currentState <= LoginStateLogin ||
-       (self.currentState <= self.skippableTypeSkipFirstState && (self.currentSkippableType == BlazeFlowSkippableTypeSkip || self.currentSkippableType == BlazeFlowSkippableTypePartialSkip))) {
-        if(self.shouldDisplayaccessories) {
-            self.shouldDisplayaccessories(false);
-        }
-    }
-    return result;
-}
-
 #pragma mark - Rows for section
 
 -(NSArray<BlazeRow*>*)loginRows

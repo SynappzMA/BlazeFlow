@@ -18,21 +18,29 @@
 
 @implementation BlazeFlow
 
+-(instancetype)init
+{
+    self = [super init];
+    if(!self) {
+        return nil;
+    }
+    self.currentState = 1;
+    return self;
+}
+
 #pragma mark Properties
 
 -(void)setBlazeFlowTableViewController:(BlazeFlowTableViewController *)blazeFlowTableViewController
 {
     _blazeFlowTableViewController = blazeFlowTableViewController;
-    _blazeFlowTableViewController.blazeFlow = self;
+    self.blazeFlowTableViewController.blazeFlow = self;
 }
 
 #pragma mark State
 
 -(BOOL)isFirstState:(NSInteger)state
 {
-    if(state <= 1 && (self.currentSkippableType == BlazeFlowSkippableTypeNone || self.currentSkippableType == BlazeFlowSkippableTypeDontSkip)) {
-        return true;
-    } else if(state <= self.skippableTypeSkipFirstState) {
+    if(state <= 1) {
         return true;
     }
     return false;
@@ -40,52 +48,17 @@
 
 -(BOOL)isLastState:(NSInteger)state
 {
-    BOOL result = false;
-    NSInteger calcState = state;
-    if(state >= self.numberOfStates && (self.currentSkippableType == BlazeFlowSkippableTypeNone || self.currentSkippableType == BlazeFlowSkippableTypeDontSkip)) {
-        result = true;
-    } else if(state-self.skippableTypeSkipFirstState+1 >= self.numberOfStates && self.currentSkippableType == BlazeFlowSkippableTypeSkip) {
-        calcState = state-self.skippableTypeSkipFirstState+1;
-        result = true;
+    if(state >= self.numberOfStates) {
+        return true;
     }
-    if(self.currentSkippableType == BlazeFlowSkippableTypeSkip || self.currentSkippableType == BlazeFlowSkippableTypePartialSkip){
-        if(calcState+1 >= self.numberOfStates) {
-            if(self.shouldDisplayaccessories) {
-                self.shouldDisplayaccessories(1);
-            }
-        } else {
-            if(self.shouldDisplayaccessories) {
-                self.shouldDisplayaccessories(0);
-            }
-        }
-    }
-    return result;
-}
-
--(void)setNumberOfStates:(NSInteger)numberOfStates
-{
-    _numberOfStates = numberOfStates;
-    if(_skippableTypeSkipFirstState) {
-        _numberOfStates -= (_skippableTypeSkipFirstState-1);
-    }
-}
-
-
--(void)setSkippableTypeSkipFirstState:(NSInteger)skippableTypeSkipFirstState
-{
-    _skippableTypeSkipFirstState = skippableTypeSkipFirstState;
-    self.currentState = skippableTypeSkipFirstState;
-    if(_numberOfStates) {
-        _numberOfStates -= (_skippableTypeSkipFirstState-1);
-    }
+    return false;
 }
 
 -(void)setCurrentState:(NSInteger)currentState
 {
-    if(self.currentSkippableType == BlazeFlowSkippableTypeDontSkip || BlazeFlowSkippableTypeNone) {
-        _currentState = currentState;
-    } else {
-        _currentState = currentState;
+    _currentState = currentState;
+    if(self.currentStateChanged) {
+        self.currentStateChanged(currentState);
     }
 }
 

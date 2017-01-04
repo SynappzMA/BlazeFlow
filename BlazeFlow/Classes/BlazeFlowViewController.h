@@ -76,18 +76,15 @@
  */
 @property(nonatomic,weak) IBOutlet UIPageControl *pageControl;
 
+/**
+ This method is called when the BlazeFlow's currentState changes. Default implementation changes the UIPageControl current index
+ */
+-(void)currentStateChanged:(NSInteger)currentState;
 
 /**
  This method is called when the BlazeFlow wants to inform that the current state has finished.
  */
 -(void)stateFinished;
-
-/**
- Using this method you can show/hide accessories like the backContainerView. Defaults to -1 = none, 0 = all.
-
- @param show user-defined type of showing to do.
- */
--(void)shouldDisplayAccessories:(NSInteger)show;
 
 /**
  Method called when the backButton has been tapped.

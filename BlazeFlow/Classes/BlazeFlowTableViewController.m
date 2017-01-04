@@ -6,8 +6,8 @@
 //  Copyright © 2016 Synappz BV. All rights reserved.
 //
 
-#import "BlazeFlowTableViewController.h"
 #import "BlazeFlow.h"
+#import "BlazeFlowTableViewController.h"
 
 @interface BlazeFlowTableViewController ()
 
