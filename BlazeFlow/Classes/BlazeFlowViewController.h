@@ -88,23 +88,28 @@
 
 /**
  Method called when the backButton has been tapped.
-
- @return BOOL when the backButton was pressed while on the firstState
  */
--(BOOL)previous;
+-(void)previous;
 
 /**
  Method called when the backButton has been tapped.
- 
- @return BOOL when next: message was sent to BlazeFlow while on the lastState
+
  */
--(BOOL)next;
+-(void)next;
 
 /**
  Method called when the close button has been tapped
-
- @return YES when close: message was sent to BlazeFlow and disposing of and/or deactivating resources was successfull
  */
--(BOOL)close;
+-(void)close;
+
+/**
+ Method called when the last state has been reached and the next button was tapped
+ */
+-(void)nextOnLastState;
+
+/**
+ Method called when the first state is the active state and the previous button was tapped
+ */
+-(void)previousOnFirstState;
 
 @end

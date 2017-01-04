@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B08689471E1D067E0014B21D"
-               BuildableName = "BlazeFlow_Simple_Example.app"
-               BlueprintName = "BlazeFlow_Simple_Example"
+               BlueprintIdentifier = "B086897C1E1D3C960014B21D"
+               BuildableName = "BlazeFlow_Tree.app"
+               BlueprintName = "BlazeFlow_Tree"
                ReferencedContainer = "container:BlazeFlow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B08689471E1D067E0014B21D"
-            BuildableName = "BlazeFlow_Simple_Example.app"
-            BlueprintName = "BlazeFlow_Simple_Example"
+            BlueprintIdentifier = "B086897C1E1D3C960014B21D"
+            BuildableName = "BlazeFlow_Tree.app"
+            BlueprintName = "BlazeFlow_Tree"
             ReferencedContainer = "container:BlazeFlow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B08689471E1D067E0014B21D"
-            BuildableName = "BlazeFlow_Simple_Example.app"
-            BlueprintName = "BlazeFlow_Simple_Example"
+            BlueprintIdentifier = "B086897C1E1D3C960014B21D"
+            BuildableName = "BlazeFlow_Tree.app"
+            BlueprintName = "BlazeFlow_Tree"
             ReferencedContainer = "container:BlazeFlow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B08689471E1D067E0014B21D"
-            BuildableName = "BlazeFlow_Simple_Example.app"
-            BlueprintName = "BlazeFlow_Simple_Example"
+            BlueprintIdentifier = "B086897C1E1D3C960014B21D"
+            BuildableName = "BlazeFlow_Tree.app"
+            BlueprintName = "BlazeFlow_Tree"
             ReferencedContainer = "container:BlazeFlow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

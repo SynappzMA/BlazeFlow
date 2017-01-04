@@ -33,6 +33,16 @@
 @property(nonatomic,copy) void (^stateFinished)();
 
 /**
+ Completion block when there is no next state
+ */
+@property(nonatomic,copy) void (^nextOnLastState)();
+
+/**
+ Completion block when there is no previous state
+ */
+@property(nonatomic,copy) void (^previousOnFirstState)();
+
+/**
  The presented BlazeTableViewController embedded in BlazeFlowViewController
  */
 @property(nonatomic,strong) BlazeFlowTableViewController *blazeFlowTableViewController;
@@ -72,22 +82,18 @@
 
 
 /**
- Close the BlazeFlow immediately independant of currentState. Dispose or deactive resources.
+ Close the BlazeFlow immediately independant of currentState. Dispose or deactivate resources.
  */
--(BOOL)close;
+-(void)close;
 
 /**
  Present the next section in the flow.
-
- @return YES if cannot go any further forwards, NO otherwise.
  */
--(BOOL)next;
+-(void)next;
 
 /**
  Present the previous section in the flow.
-
- @return YES if cannot go backwards any further, NO otherwise.
  */
--(BOOL)previous;
+-(void)previous;
 
 @end

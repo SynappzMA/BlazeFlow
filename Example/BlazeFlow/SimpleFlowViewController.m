@@ -35,37 +35,36 @@
     self.pageControl.currentPage = MAX(0,currentState-1);
 }
 
--(BOOL)previous
+-(void)previous
 {
     BOOL firstStateImminent = [self.blazeFlow isFirstState:self.blazeFlow.currentState-1];
     if(firstStateImminent) {
         self.backLabel.text = NSLocalizedString(@"BlazeFlow_Navbar_Item_Cancel", nil);
     }
-    BOOL previousOnLastState = [super previous];
-    if(previousOnLastState) {
-        //Do stuff, for example, dismiss this viewController
-        [self.blazeFlow alertWithMessage:@"First state reached!"];
-    }
-    return previousOnLastState;
+    [super previous];
 }
 
--(BOOL)next
+-(void)previousOnFirstState
+{
+    [self.blazeFlow alertWithMessage:@"First state reached!"];
+}
+
+-(void)next
 {
     if([self.backLabel.text isEqualToString:NSLocalizedString(@"BlazeFlow_Navbar_Item_Cancel", nil)]) {
         self.backLabel.text = NSLocalizedString(@"BlazeFlow_Navbar_Item_Back", nil);
     }
-    
-    BOOL nextOnLastState = [super next];
-    if(nextOnLastState) {
-        //Do stuff, for example, dismiss this viewController
-        [self.blazeFlow alertWithMessage:@"Last state reached!"];
-    }
-    return nextOnLastState;
+    [super next];
 }
 
--(BOOL)close
+-(void)nextOnLastState
 {
-    return [super close];
+    [self.blazeFlow alertWithMessage:@"Last state reached!"];
+}
+
+-(void)close
+{
+    [super close];
 }
 
 @end

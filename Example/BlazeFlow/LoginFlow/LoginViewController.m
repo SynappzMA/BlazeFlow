@@ -38,42 +38,41 @@
     }
 }
 
--(BOOL)next
+-(void)next
 {
-    BOOL result = [super next];
+    [super next];
     [self shouldDisplayAccessories:true];
-    if(result) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Last state reached!" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alert animated:true completion:nil];
-    }
-    return result;
 }
 
--(BOOL)previous
+-(void)nextOnLastState
 {
-    BOOL result = [super previous];
-    if(result) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"First state reached!" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alert animated:true completion:nil];
-    } else if([self.blazeFlow isFirstState:self.blazeFlow.currentState]) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Last state reached!" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:true completion:nil];
+}
+
+-(void)previous
+{
+    [super previous];
+    if([self.blazeFlow isFirstState:self.blazeFlow.currentState]) {
            [self shouldDisplayAccessories:false];
     }
-    
-    return result;
 }
 
--(BOOL)close
+-(void)previousOnFirstState
 {
-    BOOL result = [super close];
-    if(result) {
-        //Do stuff
-    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"First state reached!" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:true completion:nil];
+}
+
+-(void)close
+{
+    [super close];
+    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Closing!" preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alert animated:true completion:nil];
-    return result;
 }
 
 -(void)shouldDisplayAccessories:(NSInteger)show

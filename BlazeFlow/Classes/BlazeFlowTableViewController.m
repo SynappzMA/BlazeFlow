@@ -35,7 +35,7 @@
     }
     self.tableView.scrollEnabled = false;
     //Prevent the user from blazing through the flow, which could result in errors.
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.350 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.300 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.tableView.userInteractionEnabled = true;
     });
 }

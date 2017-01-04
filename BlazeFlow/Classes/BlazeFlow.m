@@ -62,16 +62,18 @@
     }
 }
 
--(BOOL)close
+-(void)close
 {
     //To override
-    return false;
 }
 
--(BOOL)next
+-(void)next
 {
     if([self isLastState:self.currentState]) {
-        return true;
+        if(self.nextOnLastState) {
+            self.nextOnLastState();
+        }
+        return;
     }
     self.currentState++;
     [self.blazeFlowTableViewController loadTableContent];
@@ -84,14 +86,15 @@
     [animation setDuration:.3];
     [[self.blazeFlowTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
     [self.blazeFlowTableViewController.tableView reloadData];
-    
-    return false;
 }
 
--(BOOL)previous
+-(void)previous
 {
     if([self isFirstState:self.currentState]) {
-        return true;
+        if(self.previousOnFirstState) {
+            self.previousOnFirstState();
+        }
+        return;
     }
     self.currentState--;
     [self.blazeFlowTableViewController loadTableContent];
@@ -104,8 +107,6 @@
     [animation setDuration:.3];
     [[self.blazeFlowTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
     [self.blazeFlowTableViewController.tableView reloadData];
-    
-    return false;
 }
 
 #pragma mark Flow

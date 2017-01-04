@@ -62,6 +62,12 @@
     self.blazeFlow.currentStateChanged = ^(NSInteger currentState) {
         [weakSelf currentStateChanged:currentState];
     };
+    self.blazeFlow.nextOnLastState = ^() {
+        [weakSelf nextOnLastState];
+    };
+    self.blazeFlow.previousOnFirstState = ^() {
+        [weakSelf previousOnFirstState];
+    };
 }
 
 #pragma mark Segue
@@ -87,24 +93,29 @@
     //To override
 }
 
--(void)shouldDisplayAccessories:(NSInteger)show
+-(void)previous
+{
+    [self.blazeFlow previous];
+}
+
+-(void)next
+{
+    [self.blazeFlow next];
+}
+
+-(void)previousOnFirstState
 {
     //To override
 }
 
--(BOOL)previous
+-(void)nextOnLastState
 {
-    return [self.blazeFlow previous];
+    //To override
 }
 
--(BOOL)next
+-(void)close
 {
-    return [self.blazeFlow next];
-}
-
--(BOOL)close
-{
-    return [self.blazeFlow close];
+    [self.blazeFlow close];
 }
 
 @end
