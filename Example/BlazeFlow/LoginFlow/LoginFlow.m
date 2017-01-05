@@ -25,25 +25,8 @@
     if(!self){
         return nil;
     }
-    self.numberOfStates = LoginStateDone;
-    self.currentState = LoginStateLogin;
-    
     self.user = [User new];
     return self;
-}
-
--(void)setBlazeFlowTableViewController:(BlazeFlowTableViewController *)blazeFlowTableViewController
-{
-    [super setBlazeFlowTableViewController:blazeFlowTableViewController];
-    [blazeFlowTableViewController registerCustomCells:@[
-                                kCardTitleTableViewCell,
-                                kCardTextFieldTableViewCell,
-                                kCardButtonTableViewCell,
-                                kCardForgotPasswordTableViewCell,
-                                kCardTopSection,
-                                kCardMiddleSection,
-                                kCardBottomSection
-                                ]];
 }
 
 #pragma mark - State logic

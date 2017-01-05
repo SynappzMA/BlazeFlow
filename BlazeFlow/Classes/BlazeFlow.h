@@ -11,6 +11,9 @@
 @class BlazeFlowTableViewController, BlazeSection, BlazeRow;
 
 @interface BlazeFlow : NSObject
+{
+    NSInteger _numberOfStates;
+}
 
 /**
  The number of states this BlazeFlow has. Default implementation is set to 0.

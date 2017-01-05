@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, BlazeFlowSkippableType) {
 @property(nonatomic,assign) BlazeFlowSkippableType currentSkippableType;
 
 /**
- The first state for the currently applied BlaezFlowSkippableType
+ The first state for the currently applied BlazeFlowSkippableType
  */
 @property(nonatomic,assign) NSInteger skippableTypeSkipFirstState;
 

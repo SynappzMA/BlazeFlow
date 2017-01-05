@@ -10,7 +10,10 @@
 
 @interface BlazeFlowTree : BlazeFlow
 
+
+/**
+ The next state that should be presented when sending the next: message.
+ */
 @property(nonatomic,assign) NSInteger nextState;
-@property(nonatomic,strong) NSMutableArray<NSNumber*> *previousStates;
 
 @end

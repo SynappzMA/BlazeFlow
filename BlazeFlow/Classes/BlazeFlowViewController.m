@@ -16,20 +16,13 @@
 
 @implementation BlazeFlowViewController
 
--(instancetype)init
-{
-    self = [super init];
-    if(!self) {
-        return nil;
-    }
-    self.blazeFlowTableViewControllerClass = [BlazeTableViewController class];
-    return self;
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.pageControl.numberOfPages = self.blazeFlow.numberOfStates;
+    if(self.blazeFlow.currentStateChanged) {
+        self.blazeFlow.currentStateChanged(self.blazeFlow.currentState);
+    }
 }
 
 #pragma mark IBActions
@@ -50,6 +43,12 @@
 }
 
 #pragma mark Setup
+
+-(BlazeFlow *)initializeBlazeFlow
+{
+    //To override
+    return nil;
+}
 
 -(void)setupBlazeFlow
 {
@@ -74,6 +73,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    self.blazeFlow = [self initializeBlazeFlow];
     Class class = !self.blazeFlowTableViewControllerClass?[BlazeFlowTableViewController class]:self.blazeFlowTableViewControllerClass;
     if([segue.identifier isEqualToString:NSStringFromClass(class)]) {
         self.blazeFlowTableViewController = segue.destinationViewController;
@@ -85,7 +85,7 @@
 
 -(void)currentStateChanged:(NSInteger)currentState
 {
-    //To override
+    self.pageControl.currentPage = MAX(0,currentState-1);
 }
 
 -(void)stateFinishedSuccesfully
@@ -116,6 +116,7 @@
 -(void)close
 {
     [self.blazeFlow close];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

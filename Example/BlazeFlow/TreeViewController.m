@@ -15,18 +15,17 @@
 
 @implementation TreeViewController
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(BlazeFlow *)initializeBlazeFlow
 {
-    self.blazeFlow = [TreeFlow new];
-    self.blazeFlow.currentState = TreeFlowState11;
-    [super prepareForSegue:segue sender:sender];
+    TreeFlow *treeFlow = [TreeFlow new];
+    treeFlow.currentState = TreeFlowState11;
+    return treeFlow;
 }
 
 -(void)nextOnLastState
 {
     [self.blazeFlow alertWithMessage:@"Last state reached!"];
 }
-
 
 -(void)previousOnFirstState
 {

@@ -14,9 +14,12 @@
 
 @interface BlazeFlow()
 
+
 @end
 
 @implementation BlazeFlow
+
+@synthesize numberOfStates = _numberOfStates;
 
 -(instancetype)init
 {
@@ -67,6 +70,8 @@
     //To override
 }
 
+#pragma mark Navigation
+
 -(void)next
 {
     if([self isLastState:self.currentState]) {
@@ -76,16 +81,7 @@
         return;
     }
     self.currentState++;
-    [self.blazeFlowTableViewController loadTableContent];
-        
-    CATransition *animation = [CATransition animation];
-    [animation setType:kCATransitionPush];
-    [animation setSubtype:kCATransitionFromRight];
-    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-    [animation setFillMode:kCAFillModeBoth];
-    [animation setDuration:.3];
-    [[self.blazeFlowTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
-    [self.blazeFlowTableViewController.tableView reloadData];
+    [self animateNext];
 }
 
 -(void)previous
@@ -97,6 +93,27 @@
         return;
     }
     self.currentState--;
+    [self animatePrevious];
+}
+
+#pragma mark Navigation Animations
+
+-(void)animateNext
+{
+    [self.blazeFlowTableViewController loadTableContent];
+    
+    CATransition *animation = [CATransition animation];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:kCATransitionFromRight];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [animation setFillMode:kCAFillModeBoth];
+    [animation setDuration:.3];
+    [[self.blazeFlowTableViewController.tableView layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
+    [self.blazeFlowTableViewController.tableView reloadData];
+}
+
+-(void)animatePrevious
+{
     [self.blazeFlowTableViewController loadTableContent];
     
     CATransition *animation = [CATransition animation];
@@ -122,7 +139,7 @@
 -(void)alertWithMessage:(NSString*)message
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_OK", nil) style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"BlazeFlow_OK", nil) style:UIAlertActionStyleCancel handler:nil]];
     [self.blazeFlowTableViewController presentViewController:alertController animated:true completion:nil];
 }
 

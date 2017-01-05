@@ -10,8 +10,6 @@
 
 @implementation BlazeFlowSkippable
 
-@synthesize numberOfStates = _numberOfStates;
-
 -(BOOL)isFirstState:(NSInteger)state
 {
     if(state <= 1 && self.currentSkippableType != BlazeFlowSkippableTypeSkip) {

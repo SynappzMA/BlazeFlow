@@ -36,12 +36,11 @@
     } else {
         self.pageControl.currentPage = MAX(0,currentState-2);
     }
-}
-
--(void)next
-{
-    [super next];
-    [self shouldDisplayAccessories:true];
+    if(currentState <= 1) {
+        [self shouldDisplayAccessories:false];
+    } else {
+        [self shouldDisplayAccessories:true];
+    }
 }
 
 -(void)nextOnLastState
@@ -49,14 +48,6 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Last state reached!" preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alert animated:true completion:nil];
-}
-
--(void)previous
-{
-    [super previous];
-    if([self.blazeFlow isFirstState:self.blazeFlow.currentState]) {
-           [self shouldDisplayAccessories:false];
-    }
 }
 
 -(void)previousOnFirstState
@@ -68,8 +59,6 @@
 
 -(void)close
 {
-    [super close];
-    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Closing!" preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"General_Ok", nil) style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alert animated:true completion:nil];
@@ -94,17 +83,19 @@
     }
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(BlazeFlow *)initializeBlazeFlow
 {
-    self.blazeFlow = [LoginFlow new];
-    self.blazeFlow.numberOfStates = LoginStateDone;
-    //To test skipabillity uncomment comment block below
+    LoginFlow *loginFlow = [LoginFlow new];
     
-    //((LoginFlow*)self.blazeFlow).currentSkippableType = BlazeFlowSkippableTypeSkip;
-    //((LoginFlow*)self.blazeFlow).skippableTypeSkipFirstState = LoginStateName;
+    loginFlow.numberOfStates = LoginStateDone;
+    loginFlow.currentState = LoginStateLogin;
     
-    [super prepareForSegue:segue sender:sender];
-    [self shouldDisplayAccessories:false];
+    /*
+    loginFlow.currentSkippableType = BlazeFlowSkippableTypeSkip;
+    loginFlow.skippableTypeSkipFirstState = LoginStateName;
+    */
+    
+    return loginFlow;
 }
 
 @end

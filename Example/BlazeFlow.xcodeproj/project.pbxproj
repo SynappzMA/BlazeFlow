@@ -15,6 +15,12 @@
 		6003F59E195388D20070C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B00FF1451E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
+		B00FF1461E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
+		B00FF1471E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
+		B00FF1481E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */; };
+		B00FF1491E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */; };
+		B00FF14A1E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */; };
 		B027A28E1E0A5349007703B9 /* BlazeFlowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */; };
 		B027A28F1E0A537D007703B9 /* BlazeFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */; };
 		B086894A1E1D067E0014B21D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BBF1DEA120D004FC2C4 /* User.m */; };
@@ -123,12 +129,13 @@
 		60FF3B682760593155D7031A /* BlazeFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlazeFlow.podspec; path = ../BlazeFlow.podspec; sourceTree = "<group>"; };
 		63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlazeFlow_Simple.plist; sourceTree = "<group>"; };
+		B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlazeFlow_Tree.plist; sourceTree = "<group>"; };
 		B027A2871E0A4CC8007703B9 /* BlazeFlowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowTableViewController.h; sourceTree = "<group>"; };
 		B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowTableViewController.m; sourceTree = "<group>"; };
 		B027A2891E0A4CC8007703B9 /* BlazeFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowViewController.h; sourceTree = "<group>"; };
 		B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowViewController.m; sourceTree = "<group>"; };
 		B086896A1E1D067E0014B21D /* BlazeFlow_Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B086896B1E1D067E0014B21D /* BlazeFlow_Example copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BlazeFlow_Example copy-Info.plist"; path = "/Users/Roy/Documents/SourceTree/BlazeFlow/Example/BlazeFlow_Example copy-Info.plist"; sourceTree = "<absolute>"; };
 		B086896D1E1D0C7E0014B21D /* SimpleFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFlow.h; sourceTree = "<group>"; };
 		B086896E1E1D0C7E0014B21D /* SimpleFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFlow.m; sourceTree = "<group>"; };
 		B08689701E1D0D3F0014B21D /* Main_simple.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_simple.storyboard; sourceTree = "<group>"; };
@@ -137,7 +144,6 @@
 		B08689761E1D263A0014B21D /* SimpleFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFlowViewController.h; sourceTree = "<group>"; };
 		B08689771E1D263A0014B21D /* SimpleFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFlowViewController.m; sourceTree = "<group>"; };
 		B08689A31E1D3C960014B21D /* BlazeFlow_Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Tree.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B08689A41E1D3C960014B21D /* BlazeFlow_Simple_Example copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BlazeFlow_Simple_Example copy-Info.plist"; path = "/Users/Roy/Documents/SourceTree/BlazeFlow/Example/BlazeFlow_Simple_Example copy-Info.plist"; sourceTree = "<absolute>"; };
 		B08689A51E1D3CC90014B21D /* BlazeFlowTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowTree.h; sourceTree = "<group>"; };
 		B08689A61E1D3CC90014B21D /* BlazeFlowTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowTree.m; sourceTree = "<group>"; };
 		B08689A91E1D3FFC0014B21D /* TreeFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeFlow.h; sourceTree = "<group>"; };
@@ -214,8 +220,6 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				C005A9309D91211B1D3506A4 /* Pods */,
-				B086896B1E1D067E0014B21D /* BlazeFlow_Example copy-Info.plist */,
-				B08689A41E1D3C960014B21D /* BlazeFlow_Simple_Example copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,6 +271,8 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */,
+				B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */,
 				6003F595195388D20070C39A /* BlazeFlow-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -462,9 +468,11 @@
 				B0CF2BCD1DEA125F004FC2C4 /* CardMiddleSection.xib in Resources */,
 				B0CF2BCA1DEA125F004FC2C4 /* CardBottomSection.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				B00FF1451E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */,
 				B0CF2B981DEA0081004FC2C4 /* Launch.xib in Resources */,
 				B0CF2BCC1DEA125F004FC2C4 /* CardForgotPasswordTableViewCell.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				B00FF1481E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */,
 				B0CF2BCF1DEA125F004FC2C4 /* CardTitleTableViewCell.xib in Resources */,
 				B0CF2BD01DEA125F004FC2C4 /* CardTopSection.xib in Resources */,
 				B0CF2BCB1DEA125F004FC2C4 /* CardButtonTableViewCell.xib in Resources */,
@@ -480,6 +488,7 @@
 				B08689591E1D067E0014B21D /* Main.storyboard in Resources */,
 				B086895A1E1D067E0014B21D /* Localizable.strings in Resources */,
 				B08689711E1D0D3F0014B21D /* Main_simple.storyboard in Resources */,
+				B00FF1491E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */,
 				B08689B11E1D401C0014B21D /* Main_tree.storyboard in Resources */,
 				B086895B1E1D067E0014B21D /* CardMiddleSection.xib in Resources */,
 				B086895C1E1D067E0014B21D /* CardBottomSection.xib in Resources */,
@@ -488,6 +497,7 @@
 				B086895F1E1D067E0014B21D /* CardForgotPasswordTableViewCell.xib in Resources */,
 				B08689601E1D067E0014B21D /* InfoPlist.strings in Resources */,
 				B08689611E1D067E0014B21D /* CardTitleTableViewCell.xib in Resources */,
+				B00FF1461E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */,
 				B08689621E1D067E0014B21D /* CardTopSection.xib in Resources */,
 				B08689631E1D067E0014B21D /* CardButtonTableViewCell.xib in Resources */,
 				B08689641E1D067E0014B21D /* CardTextFieldTableViewCell.xib in Resources */,
@@ -501,6 +511,7 @@
 				B08689911E1D3C960014B21D /* Main.storyboard in Resources */,
 				B08689921E1D3C960014B21D /* Localizable.strings in Resources */,
 				B08689931E1D3C960014B21D /* Main_simple.storyboard in Resources */,
+				B00FF14A1E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */,
 				B08689B21E1D401C0014B21D /* Main_tree.storyboard in Resources */,
 				B08689941E1D3C960014B21D /* CardMiddleSection.xib in Resources */,
 				B08689951E1D3C960014B21D /* CardBottomSection.xib in Resources */,
@@ -509,6 +520,7 @@
 				B08689981E1D3C960014B21D /* CardForgotPasswordTableViewCell.xib in Resources */,
 				B08689991E1D3C960014B21D /* InfoPlist.strings in Resources */,
 				B086899A1E1D3C960014B21D /* CardTitleTableViewCell.xib in Resources */,
+				B00FF1471E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */,
 				B086899B1E1D3C960014B21D /* CardTopSection.xib in Resources */,
 				B086899C1E1D3C960014B21D /* CardButtonTableViewCell.xib in Resources */,
 				B086899D1E1D3C960014B21D /* CardTextFieldTableViewCell.xib in Resources */,
@@ -865,7 +877,7 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 				);
-				INFOPLIST_FILE = "BlazeFlow_Example copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlazeFlow/BlazeFlow_Simple.plist";
 				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -879,7 +891,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
-				INFOPLIST_FILE = "BlazeFlow_Example copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlazeFlow/BlazeFlow_Simple.plist";
 				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -897,7 +909,7 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 				);
-				INFOPLIST_FILE = "BlazeFlow_Simple_Example copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlazeFlow/BlazeFlow_Tree.plist";
 				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -911,7 +923,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
-				INFOPLIST_FILE = "BlazeFlow_Simple_Example copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BlazeFlow/BlazeFlow_Tree.plist";
 				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

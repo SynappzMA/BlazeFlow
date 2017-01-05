@@ -9,7 +9,14 @@
 #import "BlazeFlowTree.h"
 #import "BlazeFlowTableViewController.h"
 
+@interface BlazeFlowTree()
+
+@property(nonatomic,strong) NSMutableArray<NSNumber*> *previousStates;
+
+@end
+
 @implementation BlazeFlowTree
+
 
 -(instancetype)init
 {

@@ -44,15 +44,16 @@
  The back button label. Defaults to localizedStrings Navbar_Item_Cancel and Navbar_Item_Back
  */
 @property(nonatomic,weak) IBOutlet UILabel *backLabel;
+
 /**
  The default UIImageView for the back arrow.
  */
 @property(nonatomic,weak) IBOutlet UIImageView *arrowImageView;
+
 /**
  The the container that holds all of the default back and close related outlets.
  */
 @property(nonatomic,weak) IBOutlet UIView *backContainerView;
-
 
 /**
  Default UIImageView for the close button.
@@ -64,17 +65,20 @@
  */
 @property(nonatomic,weak) IBOutlet UIButton *closeButton;
 
-
 /**
  The UIView that holds the embedded BlazeFlowTableViewController
  */
 @property(nonatomic,weak) IBOutlet UIView *containerView;
 
-
 /**
  The default UIPageControl
  */
 @property(nonatomic,weak) IBOutlet UIPageControl *pageControl;
+
+/**
+ Initialize the BlazeFlow using this method. This method is called during prepareForSegue:
+ */
+-(BlazeFlow*)initializeBlazeFlow;
 
 /**
  This method is called when the BlazeFlow's currentState changes. Default implementation changes the UIPageControl current index

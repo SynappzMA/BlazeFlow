@@ -6,8 +6,8 @@
 //  Copyright © 2017 Roy Derks. All rights reserved.
 //
 
-#import "SimpleFlowViewController.h"
 #import "SimpleFlow.h"
+#import "SimpleFlowViewController.h"
 
 @interface SimpleFlowViewController ()
 
@@ -21,27 +21,18 @@
     self.backLabel.text = NSLocalizedString(@"BlazeFlow_Navbar_Item_Cancel", nil);
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(BlazeFlow *)initializeBlazeFlow
 {
-    self.blazeFlow = [SimpleFlow new];
-    self.blazeFlow.numberOfStates = 5;
-    self.blazeFlow.currentState = 1;
-    [super prepareForSegue:segue sender:sender];
+    SimpleFlow* simpleFlow = [SimpleFlow new];
+    simpleFlow.numberOfStates = 5;
+    simpleFlow.currentState = 1;
+    return simpleFlow;
 }
 
 -(void)currentStateChanged:(NSInteger)currentState
 {
+    [super currentStateChanged:currentState];
     self.backLabel.text = currentState == 1? NSLocalizedString(@"BlazeFlow_Navbar_Item_Cancel", nil):NSLocalizedString(@"BlazeFlow_Navbar_Item_Back", nil);
-    self.pageControl.currentPage = MAX(0,currentState-1);
-}
-
--(void)previous
-{
-    BOOL firstStateImminent = [self.blazeFlow isFirstState:self.blazeFlow.currentState-1];
-    if(firstStateImminent) {
-        self.backLabel.text = NSLocalizedString(@"BlazeFlow_Navbar_Item_Cancel", nil);
-    }
-    [super previous];
 }
 
 -(void)previousOnFirstState
@@ -49,22 +40,9 @@
     [self.blazeFlow alertWithMessage:@"First state reached!"];
 }
 
--(void)next
-{
-    if([self.backLabel.text isEqualToString:NSLocalizedString(@"BlazeFlow_Navbar_Item_Cancel", nil)]) {
-        self.backLabel.text = NSLocalizedString(@"BlazeFlow_Navbar_Item_Back", nil);
-    }
-    [super next];
-}
-
 -(void)nextOnLastState
 {
     [self.blazeFlow alertWithMessage:@"Last state reached!"];
-}
-
--(void)close
-{
-    [super close];
 }
 
 @end
