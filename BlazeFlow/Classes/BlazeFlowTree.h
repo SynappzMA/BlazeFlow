@@ -16,4 +16,9 @@
  */
 @property(nonatomic,assign) NSInteger nextState;
 
+/**
+ The previous states with which the tree has traversed. The array's last object is the latest state.
+ */
+@property(nonatomic,strong) NSMutableArray<NSNumber*> *previousStates;
+
 @end

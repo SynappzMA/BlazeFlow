@@ -14,16 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Blaze (1.0.16):
+  - BDGImagePicker (0.0.11)
+  - Blaze (1.0.21):
     - AFNetworking
+    - BDGImagePicker
 
 DEPENDENCIES:
   - Blaze
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Blaze: abc681da2150659a13c0d484f1fb726f9c0cc8d8
+  BDGImagePicker: 7b15d5dcc5130d50f2a5eb127785138897a0d7e3
+  Blaze: 7b2060f48dd262cc1bf562d91d8e09be9121333f
 
-PODFILE CHECKSUM: a0c33c910f56834daf7c2824bf7a34cad4a1901a
+PODFILE CHECKSUM: fde233feeb033cad702cfdeef4e6750055489af4
 
 COCOAPODS: 1.1.1

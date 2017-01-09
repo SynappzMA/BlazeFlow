@@ -11,7 +11,7 @@
 
 @interface BlazeFlowTree()
 
-@property(nonatomic,strong) NSMutableArray<NSNumber*> *previousStates;
+
 
 @end
 

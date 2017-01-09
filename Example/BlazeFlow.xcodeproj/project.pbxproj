@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1317CB70D1CC7B1A6AA21572 /* Pods_BlazeFlow_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36012FB7931DDDCDD9654F61 /* Pods_BlazeFlow_Login.framework */; };
+		550C082499A426DAE8B4B2F3 /* Pods_BlazeFlow_Simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A287227FECA328DBE63EA1 /* Pods_BlazeFlow_Simple.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -15,6 +17,7 @@
 		6003F59E195388D20070C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8F965BA394F88B4C8BE8047D /* Pods_BlazeFlow_Tree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44A82904428B08097AEBD15 /* Pods_BlazeFlow_Tree.framework */; };
 		B00FF1451E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
 		B00FF1461E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
 		B00FF1471E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
@@ -35,7 +38,6 @@
 		B08689541E1D067E0014B21D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		B08689551E1D067E0014B21D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		B08689561E1D067E0014B21D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		B08689571E1D067E0014B21D /* Pods_BlazeFlow_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */; };
 		B08689591E1D067E0014B21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B086895A1E1D067E0014B21D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BAB1DEA02C8004FC2C4 /* Localizable.strings */; };
 		B086895B1E1D067E0014B21D /* CardMiddleSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC61DEA125F004FC2C4 /* CardMiddleSection.xib */; };
@@ -70,7 +72,6 @@
 		B086898C1E1D3C960014B21D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		B086898D1E1D3C960014B21D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		B086898E1E1D3C960014B21D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		B086898F1E1D3C960014B21D /* Pods_BlazeFlow_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */; };
 		B08689911E1D3C960014B21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B08689921E1D3C960014B21D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BAB1DEA02C8004FC2C4 /* Localizable.strings */; };
 		B08689931E1D3C960014B21D /* Main_simple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08689701E1D0D3F0014B21D /* Main_simple.storyboard */; };
@@ -110,12 +111,16 @@
 		B0CF2BCE1DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC71DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib */; };
 		B0CF2BCF1DEA125F004FC2C4 /* CardTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC81DEA125F004FC2C4 /* CardTitleTableViewCell.xib */; };
 		B0CF2BD01DEA125F004FC2C4 /* CardTopSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */; };
-		C425F645E997B2D1AFAA5CF6 /* Pods_BlazeFlow_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0339591DFEBA283B3CCDFDFD /* Pods-BlazeFlow_Tree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Tree.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree.release.xcconfig"; sourceTree = "<group>"; };
+		03854CB64AD553F92040D799 /* Pods-BlazeFlow_Simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Simple/Pods-BlazeFlow_Simple.release.xcconfig"; sourceTree = "<group>"; };
+		05F3A68FF0934CA8CB35F42F /* Pods-BlazeFlow_Tree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Tree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree.debug.xcconfig"; sourceTree = "<group>"; };
 		1F41043585A0103B9A26EDAA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		24A287227FECA328DBE63EA1 /* Pods_BlazeFlow_Simple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Simple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		36012FB7931DDDCDD9654F61 /* Pods_BlazeFlow_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* BlazeFlow_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,8 +132,11 @@
 		6003F59D195388D20070C39A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		60FF3B682760593155D7031A /* BlazeFlow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlazeFlow.podspec; path = ../BlazeFlow.podspec; sourceTree = "<group>"; };
-		63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D7B04EA208818F210E3F87 /* Pods-BlazeFlow_Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Login.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Login/Pods-BlazeFlow_Login.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A208C343CCFDD20E1FE201D3 /* Pods-BlazeFlow_Simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Simple/Pods-BlazeFlow_Simple.debug.xcconfig"; sourceTree = "<group>"; };
+		A44A82904428B08097AEBD15 /* Pods_BlazeFlow_Tree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Tree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C842A5E48D611959DC1B07 /* Pods-BlazeFlow_Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Login/Pods-BlazeFlow_Login.debug.xcconfig"; sourceTree = "<group>"; };
 		B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlazeFlow_Simple.plist; sourceTree = "<group>"; };
 		B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlazeFlow_Tree.plist; sourceTree = "<group>"; };
 		B027A2871E0A4CC8007703B9 /* BlazeFlowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowTableViewController.h; sourceTree = "<group>"; };
@@ -182,7 +190,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				C425F645E997B2D1AFAA5CF6 /* Pods_BlazeFlow_Example.framework in Frameworks */,
+				1317CB70D1CC7B1A6AA21572 /* Pods_BlazeFlow_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +201,7 @@
 				B08689541E1D067E0014B21D /* CoreGraphics.framework in Frameworks */,
 				B08689551E1D067E0014B21D /* UIKit.framework in Frameworks */,
 				B08689561E1D067E0014B21D /* Foundation.framework in Frameworks */,
-				B08689571E1D067E0014B21D /* Pods_BlazeFlow_Example.framework in Frameworks */,
+				550C082499A426DAE8B4B2F3 /* Pods_BlazeFlow_Simple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +212,7 @@
 				B086898C1E1D3C960014B21D /* CoreGraphics.framework in Frameworks */,
 				B086898D1E1D3C960014B21D /* UIKit.framework in Frameworks */,
 				B086898E1E1D3C960014B21D /* Foundation.framework in Frameworks */,
-				B086898F1E1D3C960014B21D /* Pods_BlazeFlow_Example.framework in Frameworks */,
+				8F965BA394F88B4C8BE8047D /* Pods_BlazeFlow_Tree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +247,9 @@
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				63CFC43FCA356BB360588D18 /* Pods_BlazeFlow_Example.framework */,
+				36012FB7931DDDCDD9654F61 /* Pods_BlazeFlow_Login.framework */,
+				24A287227FECA328DBE63EA1 /* Pods_BlazeFlow_Simple.framework */,
+				A44A82904428B08097AEBD15 /* Pods_BlazeFlow_Tree.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,6 +371,12 @@
 			children = (
 				34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */,
 				F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */,
+				A5C842A5E48D611959DC1B07 /* Pods-BlazeFlow_Login.debug.xcconfig */,
+				79D7B04EA208818F210E3F87 /* Pods-BlazeFlow_Login.release.xcconfig */,
+				A208C343CCFDD20E1FE201D3 /* Pods-BlazeFlow_Simple.debug.xcconfig */,
+				03854CB64AD553F92040D799 /* Pods-BlazeFlow_Simple.release.xcconfig */,
+				05F3A68FF0934CA8CB35F42F /* Pods-BlazeFlow_Tree.debug.xcconfig */,
+				0339591DFEBA283B3CCDFDFD /* Pods-BlazeFlow_Tree.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -542,7 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Login/Pods-BlazeFlow_Login-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B08689481E1D067E0014B21D /* [CP] Check Pods Manifest.lock */ = {
@@ -572,7 +588,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Simple/Pods-BlazeFlow_Simple-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B08689661E1D067E0014B21D /* [CP] Copy Pods Resources */ = {
@@ -587,7 +603,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Simple/Pods-BlazeFlow_Simple-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B086897D1E1D3C960014B21D /* [CP] Check Pods Manifest.lock */ = {
@@ -617,7 +633,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B086899F1E1D3C960014B21D /* [CP] Copy Pods Resources */ = {
@@ -632,7 +648,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0B3A8FD6D11D90D818BBD9D /* [CP] Check Pods Manifest.lock */ = {
@@ -662,7 +678,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Login/Pods-BlazeFlow_Login-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -777,6 +793,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -795,6 +812,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MODULE_NAME = BlazeFlow;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -822,6 +840,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -833,6 +852,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MODULE_NAME = BlazeFlow;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -841,7 +861,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */;
+			baseConfigurationReference = A5C842A5E48D611959DC1B07 /* Pods-BlazeFlow_Login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
@@ -855,7 +875,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */;
+			baseConfigurationReference = 79D7B04EA208818F210E3F87 /* Pods-BlazeFlow_Login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
@@ -869,7 +889,7 @@
 		};
 		B08689681E1D067E0014B21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */;
+			baseConfigurationReference = A208C343CCFDD20E1FE201D3 /* Pods-BlazeFlow_Simple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
@@ -887,7 +907,7 @@
 		};
 		B08689691E1D067E0014B21D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */;
+			baseConfigurationReference = 03854CB64AD553F92040D799 /* Pods-BlazeFlow_Simple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
@@ -901,7 +921,7 @@
 		};
 		B08689A11E1D3C960014B21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34AB87307FD44A46527430C3 /* Pods-BlazeFlow_Example.debug.xcconfig */;
+			baseConfigurationReference = 05F3A68FF0934CA8CB35F42F /* Pods-BlazeFlow_Tree.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
@@ -919,7 +939,7 @@
 		};
 		B08689A21E1D3C960014B21D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */;
+			baseConfigurationReference = 0339591DFEBA283B3CCDFDFD /* Pods-BlazeFlow_Tree.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = NO;
