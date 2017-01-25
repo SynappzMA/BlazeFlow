@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - BDGImagePicker (0.0.11)
-  - Blaze (1.0.21):
+  - Blaze (1.0.26):
     - AFNetworking
     - BDGImagePicker
 
@@ -25,8 +25,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BDGImagePicker: 7b15d5dcc5130d50f2a5eb127785138897a0d7e3
-  Blaze: 7b2060f48dd262cc1bf562d91d8e09be9121333f
+  Blaze: fb95da04605c76a83f11f8387decc7ebebb9ada7
 
-PODFILE CHECKSUM: fde233feeb033cad702cfdeef4e6750055489af4
+PODFILE CHECKSUM: d6153d0aef7c6ae48b81708d449738615d7c9bfd
 
 COCOAPODS: 1.1.1

@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "UIView+SimpleAnimations.h"
 #import "BlazeFlowTableViewController.h"
+#import "BlazeFlowNavigationController.h"
 
 @interface LoginViewController ()
 
@@ -26,6 +27,20 @@
 {
     [super viewWillAppear:animated];
     self.pageControl.numberOfPages = self.blazeFlow.numberOfStates-1;
+
+}
+
+//Test navigationController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [super viewDidAppear:animated];
+        BlazeFlow *flow = [self initializeBlazeFlow];
+        BlazeFlowNavigationController *navCon = [[BlazeFlowNavigationController alloc] initWithBlazeFlow:flow];
+            [self presentViewController:navCon animated:true completion:nil];
+    });
 }
 
 -(void)currentStateChanged:(NSInteger)currentState

@@ -7,7 +7,8 @@
 //
 
 #import "TreeFlow.h"
-@import Blaze;
+#import "BlazeTableViewController.h"
+
 
 @implementation TreeFlow
 

@@ -53,6 +53,8 @@
         case LoginStateDone:
             [rows addObjectsFromArray:[self doneRows]];
              break;
+        case LoginStateNone:
+            break;
     }
     [rows addObject:[BlazeRow rowWithXibName:@"CardBottomSection"]];
     section.rows = rows;

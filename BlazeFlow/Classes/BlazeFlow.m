@@ -6,10 +6,9 @@
 //
 //
 
-@import Blaze;
-
 #import "BlazeFlow.h"
 #import "BlazeFlowTableViewController.h"
+#import "BlazeTableViewController.h"
 
 
 @interface BlazeFlow()

@@ -8,12 +8,28 @@
 
 #import "TreeViewController.h"
 #import "TreeFlow.h"
+#import "BlazeFlowNavigationController.h"
 
 @interface TreeViewController ()
 
 @end
 
 @implementation TreeViewController
+
+//Test navigationController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [super viewDidAppear:animated];
+        BlazeFlowNavigationController *navCon = [[BlazeFlowNavigationController alloc] initWithBlazeFlow:self.blazeFlow];
+        navCon.showRightBarItemOnFirstState = true;
+        navCon.showRightBarItem = true;
+        navCon.showLeftBarItemOnFirstState = true;
+        [self presentViewController:navCon animated:true completion:nil];
+    });
+}
 
 -(BlazeFlow *)initializeBlazeFlow
 {

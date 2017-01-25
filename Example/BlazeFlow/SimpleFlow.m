@@ -7,8 +7,9 @@
 //
 
 #import "SimpleFlow.h"
+#import "BlazeTableViewController.h"
 
-@import Blaze;
+
 
 @implementation SimpleFlow
 
