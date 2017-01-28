@@ -7,13 +7,43 @@
 //
 
 #import "AppDelegate.h"
+#import "NavBasedTableViewController.h"
+#import "BlazeFlowTree.h"
+#import "TreeFlow.h"
+#import "BlazeFlowNavigationController.h"
+#import "BlazeFlowNavigationControllerConfiguraton.h"
+#import "LoginFlow.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+#ifdef NAVBASED
+    //    TreeFlow *treeFlow = [TreeFlow new];
+    //    treeFlow.currentState = TreeFlowState11;
+    LoginFlow *flow = [LoginFlow new];
+    flow.currentState = LoginStateLogin;
+    
+    BlazeFlowNavigationController* navCon = [[BlazeFlowNavigationController alloc] initWithBlazeFlow:flow];
+    navCon.blazeFlowTableViewControllerSubclass = [NavBasedTableViewController class];
+    
+    BlazeFlowNavigationControllerConfiguraton *conf = [BlazeFlowNavigationControllerConfiguraton new];
+    conf.showPageControl = true;
+    conf.pageControlAmountOfPages = 5;
+    conf.showRightBarItem = true;
+    conf.rightBarItemTitle = @"Close";
+    
+    __weak typeof(navCon) weakNavCon = navCon;
+    conf.rightBarItemAction = ^{
+        //[weakNavCon dismissViewControllerAnimated:true completion:nil];
+    };
+    
+    flow.blazeFlowNavigationControllerConfiguraton = conf;
+    
+    [self.window setRootViewController:navCon];
     // Override point for customization after application launch.
+#endif
     return YES;
 }
 

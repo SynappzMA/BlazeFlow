@@ -24,6 +24,10 @@
 		B00FF14A1E1E3EF70046621C /* BlazeFlow_Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */; };
 		B027A28E1E0A5349007703B9 /* BlazeFlowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */; };
 		B027A28F1E0A537D007703B9 /* BlazeFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */; };
+		B054F90F1E3CC89A0047938C /* NavBasedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */; };
+		B054F9101E3CC89A0047938C /* NavBasedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */; };
+		B054F9111E3CC89A0047938C /* NavBasedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */; };
+		B054F9121E3CC89A0047938C /* NavBasedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */; };
 		B0664D1D1E3942E3000DF194 /* BlazeFlowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */; };
 		B0664D1E1E3944AE000DF194 /* BlazeFlowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */; };
 		B0664D1F1E3944AF000DF194 /* BlazeFlowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */; };
@@ -112,6 +116,46 @@
 		B0CF2BCE1DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC71DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib */; };
 		B0CF2BCF1DEA125F004FC2C4 /* CardTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC81DEA125F004FC2C4 /* CardTitleTableViewCell.xib */; };
 		B0CF2BD01DEA125F004FC2C4 /* CardTopSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */; };
+		B0E7E37C1E3C8DA4004444F5 /* BlazeFlowSkippable.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689741E1D22CC0014B21D /* BlazeFlowSkippable.m */; };
+		B0E7E37D1E3C8DA4004444F5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BBF1DEA120D004FC2C4 /* User.m */; };
+		B0E7E37E1E3C8DA4004444F5 /* BlazeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */; };
+		B0E7E37F1E3C8DA4004444F5 /* BlazeFlowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */; };
+		B0E7E3801E3C8DA4004444F5 /* BlazeFlowNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */; };
+		B0E7E3811E3C8DA4004444F5 /* BlazeFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */; };
+		B0E7E3821E3C8DA4004444F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
+		B0E7E3831E3C8DA4004444F5 /* SimpleFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689771E1D263A0014B21D /* SimpleFlowViewController.m */; };
+		B0E7E3841E3C8DA4004444F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BB21DEA11E4004FC2C4 /* LoginViewController.m */; };
+		B0E7E3851E3C8DA4004444F5 /* UIView+SimpleAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BBD1DEA120D004FC2C4 /* UIView+SimpleAnimations.m */; };
+		B0E7E3861E3C8DA4004444F5 /* BlazeFlowTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689A61E1D3CC90014B21D /* BlazeFlowTree.m */; };
+		B0E7E3871E3C8DA4004444F5 /* TreeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689AA1E1D3FFC0014B21D /* TreeFlow.m */; };
+		B0E7E3881E3C8DA4004444F5 /* SimpleFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B086896E1E1D0C7E0014B21D /* SimpleFlow.m */; };
+		B0E7E3891E3C8DA4004444F5 /* TreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689AD1E1D400A0014B21D /* TreeViewController.m */; };
+		B0E7E38A1E3C8DA4004444F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		B0E7E38B1E3C8DA4004444F5 /* LoginFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2BAE1DEA11E4004FC2C4 /* LoginFlow.m */; };
+		B0E7E38D1E3C8DA4004444F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		B0E7E38E1E3C8DA4004444F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		B0E7E38F1E3C8DA4004444F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		B0E7E3901E3C8DA4004444F5 /* libPods-BlazeFlow_Tree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4201AD36C137AAA3BBA6E1C6 /* libPods-BlazeFlow_Tree.a */; };
+		B0E7E3921E3C8DA4004444F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B0E7E3931E3C8DA4004444F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BAB1DEA02C8004FC2C4 /* Localizable.strings */; };
+		B0E7E3941E3C8DA4004444F5 /* Main_simple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08689701E1D0D3F0014B21D /* Main_simple.storyboard */; };
+		B0E7E3951E3C8DA4004444F5 /* BlazeFlow_Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1441E1E3EF70046621C /* BlazeFlow_Tree.plist */; };
+		B0E7E3961E3C8DA4004444F5 /* Main_tree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08689AF1E1D401C0014B21D /* Main_tree.storyboard */; };
+		B0E7E3971E3C8DA4004444F5 /* CardMiddleSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC61DEA125F004FC2C4 /* CardMiddleSection.xib */; };
+		B0E7E3981E3C8DA4004444F5 /* CardBottomSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC31DEA125F004FC2C4 /* CardBottomSection.xib */; };
+		B0E7E3991E3C8DA4004444F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		B0E7E39A1E3C8DA4004444F5 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2B971DEA0081004FC2C4 /* Launch.xib */; };
+		B0E7E39B1E3C8DA4004444F5 /* CardForgotPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC51DEA125F004FC2C4 /* CardForgotPasswordTableViewCell.xib */; };
+		B0E7E39C1E3C8DA4004444F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		B0E7E39D1E3C8DA4004444F5 /* CardTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC81DEA125F004FC2C4 /* CardTitleTableViewCell.xib */; };
+		B0E7E39E1E3C8DA4004444F5 /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
+		B0E7E39F1E3C8DA4004444F5 /* CardTopSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */; };
+		B0E7E3A01E3C8DA4004444F5 /* CardButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC41DEA125F004FC2C4 /* CardButtonTableViewCell.xib */; };
+		B0E7E3A11E3C8DA4004444F5 /* CardTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC71DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib */; };
+		B0E7E3B61E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
+		B0E7E3B71E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
+		B0E7E3B81E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
+		B0E7E3B91E3CADC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
 		D019FC4B4368B444846835F1 /* libPods-BlazeFlow_Simple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F34757F59CE30E22BC939CE /* libPods-BlazeFlow_Simple.a */; };
 		F9BCEB77A9F47B4EB1A18A39 /* libPods-BlazeFlow_Tree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4201AD36C137AAA3BBA6E1C6 /* libPods-BlazeFlow_Tree.a */; };
 /* End PBXBuildFile section */
@@ -145,6 +189,8 @@
 		B027A2881E0A4CC8007703B9 /* BlazeFlowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowTableViewController.m; sourceTree = "<group>"; };
 		B027A2891E0A4CC8007703B9 /* BlazeFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowViewController.h; sourceTree = "<group>"; };
 		B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowViewController.m; sourceTree = "<group>"; };
+		B054F90D1E3CC89A0047938C /* NavBasedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBasedTableViewController.h; sourceTree = "<group>"; };
+		B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBasedTableViewController.m; sourceTree = "<group>"; };
 		B0664D1B1E3942E3000DF194 /* BlazeFlowNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowNavigationController.h; sourceTree = "<group>"; };
 		B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowNavigationController.m; sourceTree = "<group>"; };
 		B086896A1E1D067E0014B21D /* BlazeFlow_Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +228,10 @@
 		B0CF2BC71DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		B0CF2BC81DEA125F004FC2C4 /* CardTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTitleTableViewCell.xib; sourceTree = "<group>"; };
 		B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTopSection.xib; sourceTree = "<group>"; };
+		B0E7E3A71E3C8DA4004444F5 /* BlazeFlow_Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E7E3A81E3C8DA5004444F5 /* BlazeFlow_Tree copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BlazeFlow_Tree copy-Info.plist"; path = "/Users/Roy/Documents/SourceTree/BlazeFlow/Example/BlazeFlow_Tree copy-Info.plist"; sourceTree = "<absolute>"; };
+		B0E7E3B41E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowNavigationControllerConfiguraton.h; sourceTree = "<group>"; };
+		B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowNavigationControllerConfiguraton.m; sourceTree = "<group>"; };
 		BEE705F7EB61DFC747CD3382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E7F8DD028440AF3333C888F7 /* libPods-BlazeFlow_Login.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlazeFlow_Login.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +271,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0E7E38C1E3C8DA4004444F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E7E38D1E3C8DA4004444F5 /* CoreGraphics.framework in Frameworks */,
+				B0E7E38E1E3C8DA4004444F5 /* UIKit.framework in Frameworks */,
+				B0E7E38F1E3C8DA4004444F5 /* Foundation.framework in Frameworks */,
+				B0E7E3901E3C8DA4004444F5 /* libPods-BlazeFlow_Tree.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -233,6 +294,7 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				C005A9309D91211B1D3506A4 /* Pods */,
+				B0E7E3A81E3C8DA5004444F5 /* BlazeFlow_Tree copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,6 +304,7 @@
 				6003F58A195388D20070C39A /* BlazeFlow_Login.app */,
 				B086896A1E1D067E0014B21D /* BlazeFlow_Simple.app */,
 				B08689A31E1D3C960014B21D /* BlazeFlow_Tree.app */,
+				B0E7E3A71E3C8DA4004444F5 /* BlazeFlow_Navigation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +325,7 @@
 		6003F593195388D20070C39A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				B0E7E3B01E3C9093004444F5 /* Navbased */,
 				B08689A81E1D3FEF0014B21D /* Tree */,
 				B086896C1E1D07130014B21D /* Simple */,
 				B0CF2BAC1DEA11E4004FC2C4 /* LoginFlow */,
@@ -343,6 +407,8 @@
 				B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */,
 				B0664D1B1E3942E3000DF194 /* BlazeFlowNavigationController.h */,
 				B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */,
+				B0E7E3B41E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.h */,
+				B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */,
 			);
 			name = BlazeFlow;
 			path = ../BlazeFlow/Classes;
@@ -371,6 +437,15 @@
 				B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		B0E7E3B01E3C9093004444F5 /* Navbased */ = {
+			isa = PBXGroup;
+			children = (
+				B054F90D1E3CC89A0047938C /* NavBasedTableViewController.h */,
+				B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */,
+			);
+			name = Navbased;
 			sourceTree = "<group>";
 		};
 		C005A9309D91211B1D3506A4 /* Pods */ = {
@@ -451,6 +526,26 @@
 			productReference = B08689A31E1D3C960014B21D /* BlazeFlow_Tree.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B0E7E3791E3C8DA4004444F5 /* BlazeFlow_Navigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0E7E3A41E3C8DA4004444F5 /* Build configuration list for PBXNativeTarget "BlazeFlow_Navigation" */;
+			buildPhases = (
+				B0E7E37A1E3C8DA4004444F5 /* [CP] Check Pods Manifest.lock */,
+				B0E7E37B1E3C8DA4004444F5 /* Sources */,
+				B0E7E38C1E3C8DA4004444F5 /* Frameworks */,
+				B0E7E3911E3C8DA4004444F5 /* Resources */,
+				B0E7E3A21E3C8DA4004444F5 /* [CP] Embed Pods Frameworks */,
+				B0E7E3A31E3C8DA4004444F5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlazeFlow_Navigation;
+			productName = BlazeFlow;
+			productReference = B0E7E3A71E3C8DA4004444F5 /* BlazeFlow_Navigation.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -477,6 +572,7 @@
 				6003F589195388D20070C39A /* BlazeFlow_Login */,
 				B08689471E1D067E0014B21D /* BlazeFlow_Simple */,
 				B086897C1E1D3C960014B21D /* BlazeFlow_Tree */,
+				B0E7E3791E3C8DA4004444F5 /* BlazeFlow_Navigation */,
 			);
 		};
 /* End PBXProject section */
@@ -547,6 +643,29 @@
 				B086899B1E1D3C960014B21D /* CardTopSection.xib in Resources */,
 				B086899C1E1D3C960014B21D /* CardButtonTableViewCell.xib in Resources */,
 				B086899D1E1D3C960014B21D /* CardTextFieldTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E7E3911E3C8DA4004444F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E7E3921E3C8DA4004444F5 /* Main.storyboard in Resources */,
+				B0E7E3931E3C8DA4004444F5 /* Localizable.strings in Resources */,
+				B0E7E3941E3C8DA4004444F5 /* Main_simple.storyboard in Resources */,
+				B0E7E3951E3C8DA4004444F5 /* BlazeFlow_Tree.plist in Resources */,
+				B0E7E3961E3C8DA4004444F5 /* Main_tree.storyboard in Resources */,
+				B0E7E3971E3C8DA4004444F5 /* CardMiddleSection.xib in Resources */,
+				B0E7E3981E3C8DA4004444F5 /* CardBottomSection.xib in Resources */,
+				B0E7E3991E3C8DA4004444F5 /* Images.xcassets in Resources */,
+				B0E7E39A1E3C8DA4004444F5 /* Launch.xib in Resources */,
+				B0E7E39B1E3C8DA4004444F5 /* CardForgotPasswordTableViewCell.xib in Resources */,
+				B0E7E39C1E3C8DA4004444F5 /* InfoPlist.strings in Resources */,
+				B0E7E39D1E3C8DA4004444F5 /* CardTitleTableViewCell.xib in Resources */,
+				B0E7E39E1E3C8DA4004444F5 /* BlazeFlow_Simple.plist in Resources */,
+				B0E7E39F1E3C8DA4004444F5 /* CardTopSection.xib in Resources */,
+				B0E7E3A01E3C8DA4004444F5 /* CardButtonTableViewCell.xib in Resources */,
+				B0E7E3A11E3C8DA4004444F5 /* CardTextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +777,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B0E7E37A1E3C8DA4004444F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0E7E3A21E3C8DA4004444F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0E7E3A31E3C8DA4004444F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlazeFlow_Tree/Pods-BlazeFlow_Tree-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0B3A8FD6D11D90D818BBD9D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,7 +868,9 @@
 				B027A28F1E0A537D007703B9 /* BlazeFlowViewController.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				B086897A1E1D26CF0014B21D /* SimpleFlowViewController.m in Sources */,
+				B0E7E3B71E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B0CF2BB51DEA11E4004FC2C4 /* LoginViewController.m in Sources */,
+				B054F90F1E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
 				B08689AB1E1D3FFC0014B21D /* TreeFlow.m in Sources */,
 				B08689AE1E1D400A0014B21D /* TreeViewController.m in Sources */,
 				B0CF2BC01DEA120D004FC2C4 /* UIView+SimpleAnimations.m in Sources */,
@@ -727,7 +893,9 @@
 				B086894E1E1D067E0014B21D /* AppDelegate.m in Sources */,
 				B08689781E1D263A0014B21D /* SimpleFlowViewController.m in Sources */,
 				B086894F1E1D067E0014B21D /* LoginViewController.m in Sources */,
+				B0E7E3B81E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B08689501E1D067E0014B21D /* UIView+SimpleAnimations.m in Sources */,
+				B054F9101E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
 				B08689B71E1D402D0014B21D /* BlazeFlowTree.m in Sources */,
 				B08689B51E1D40290014B21D /* TreeFlow.m in Sources */,
 				B08689721E1D0E910014B21D /* SimpleFlow.m in Sources */,
@@ -750,13 +918,40 @@
 				B08689841E1D3C960014B21D /* AppDelegate.m in Sources */,
 				B08689851E1D3C960014B21D /* SimpleFlowViewController.m in Sources */,
 				B08689861E1D3C960014B21D /* LoginViewController.m in Sources */,
+				B0E7E3B91E3CADC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B08689871E1D3C960014B21D /* UIView+SimpleAnimations.m in Sources */,
+				B054F9111E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
 				B08689B81E1D402E0014B21D /* BlazeFlowTree.m in Sources */,
 				B08689B61E1D402A0014B21D /* TreeFlow.m in Sources */,
 				B08689881E1D3C960014B21D /* SimpleFlow.m in Sources */,
 				B08689B41E1D40260014B21D /* TreeViewController.m in Sources */,
 				B08689891E1D3C960014B21D /* main.m in Sources */,
 				B086898A1E1D3C960014B21D /* LoginFlow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E7E37B1E3C8DA4004444F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E7E37C1E3C8DA4004444F5 /* BlazeFlowSkippable.m in Sources */,
+				B0E7E37D1E3C8DA4004444F5 /* User.m in Sources */,
+				B0E7E37E1E3C8DA4004444F5 /* BlazeFlow.m in Sources */,
+				B0E7E37F1E3C8DA4004444F5 /* BlazeFlowTableViewController.m in Sources */,
+				B0E7E3801E3C8DA4004444F5 /* BlazeFlowNavigationController.m in Sources */,
+				B0E7E3811E3C8DA4004444F5 /* BlazeFlowViewController.m in Sources */,
+				B0E7E3821E3C8DA4004444F5 /* AppDelegate.m in Sources */,
+				B0E7E3831E3C8DA4004444F5 /* SimpleFlowViewController.m in Sources */,
+				B0E7E3841E3C8DA4004444F5 /* LoginViewController.m in Sources */,
+				B0E7E3851E3C8DA4004444F5 /* UIView+SimpleAnimations.m in Sources */,
+				B0E7E3B61E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
+				B054F9121E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
+				B0E7E3861E3C8DA4004444F5 /* BlazeFlowTree.m in Sources */,
+				B0E7E3871E3C8DA4004444F5 /* TreeFlow.m in Sources */,
+				B0E7E3881E3C8DA4004444F5 /* SimpleFlow.m in Sources */,
+				B0E7E3891E3C8DA4004444F5 /* TreeViewController.m in Sources */,
+				B0E7E38A1E3C8DA4004444F5 /* main.m in Sources */,
+				B0E7E38B1E3C8DA4004444F5 /* LoginFlow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,6 +1156,44 @@
 			};
 			name = Release;
 		};
+		B0E7E3A51E3C8DA4004444F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F3A68FF0934CA8CB35F42F /* Pods-BlazeFlow_Tree.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"NAVBASED=1",
+				);
+				INFOPLIST_FILE = "BlazeFlow_Tree copy-Info.plist";
+				MODULE_NAME = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B0E7E3A61E3C8DA4004444F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0339591DFEBA283B3CCDFDFD /* Pods-BlazeFlow_Tree.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"NAVBASED=1",
+				);
+				INFOPLIST_FILE = "BlazeFlow_Tree copy-Info.plist";
+				MODULE_NAME = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -996,6 +1229,15 @@
 			buildConfigurations = (
 				B08689A11E1D3C960014B21D /* Debug */,
 				B08689A21E1D3C960014B21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0E7E3A41E3C8DA4004444F5 /* Build configuration list for PBXNativeTarget "BlazeFlow_Navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0E7E3A51E3C8DA4004444F5 /* Debug */,
+				B0E7E3A61E3C8DA4004444F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

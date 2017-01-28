@@ -11,6 +11,8 @@
 #import "UIView+SimpleAnimations.h"
 #import "BlazeFlowTableViewController.h"
 #import "BlazeFlowNavigationController.h"
+#import "BlazeFlowNavigationControllerConfiguraton.h"
+#import "NavBasedTableViewController.h"
 
 @interface LoginViewController ()
 
@@ -38,8 +40,22 @@
     dispatch_once(&onceToken, ^{
         [super viewDidAppear:animated];
         BlazeFlow *flow = [self initializeBlazeFlow];
-        BlazeFlowNavigationController *navCon = [[BlazeFlowNavigationController alloc] initWithBlazeFlow:flow];
-            [self presentViewController:navCon animated:true completion:nil];
+        flow.blazeFlowTableViewControllerSubclass = [NavBasedTableViewController class];
+        
+        BlazeFlowNavigationControllerConfiguraton *conf = [BlazeFlowNavigationControllerConfiguraton new];
+        conf.showPageControl = true;
+        conf.pageControlAmountOfPages = 5;
+        conf.showRightBarItem = true;
+        conf.rightBarItemTitle = @"Close";
+        
+        BlazeFlowNavigationController* navCon = [[BlazeFlowNavigationController alloc] initWithBlazeFlow:flow];
+        __weak typeof(navCon) weakNavCon = navCon;
+        conf.rightBarItemAction = ^{
+            [weakNavCon dismissViewControllerAnimated:true completion:nil];
+        };
+        
+        flow.blazeFlowNavigationControllerConfiguraton = conf;
+        [self presentViewController:navCon animated:true completion:nil];
     });
 }
 

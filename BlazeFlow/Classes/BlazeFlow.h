@@ -8,7 +8,7 @@
 
 @import Foundation;
 
-@class BlazeFlowTableViewController, BlazeSection, BlazeRow;
+@class BlazeFlowTableViewController, BlazeSection, BlazeRow, BlazeFlowNavigationControllerConfiguraton;
 
 @interface BlazeFlow : NSObject
 {
@@ -98,5 +98,19 @@
  Present the previous section in the flow.
  */
 -(void)previous;
+
+#pragma mark - BlazeFlowNavigationController
+
+/**
+ The subClass of BlazeFlowTableViewController the BlazeFlowNavigationController presents.
+ */
+@property(nonatomic,assign) Class blazeFlowTableViewControllerSubclass;
+
+/**
+ @description
+ Configuration object for several properties of the BlazeFlowNavigationController. 
+ You may ommit this configuration object if you do not wish to have the functionality of UIBarButtonItems and a standard UIPageContol added to the viewControllers.
+ */
+@property(nonatomic,strong) BlazeFlowNavigationControllerConfiguraton *blazeFlowNavigationControllerConfiguraton;
 
 @end
