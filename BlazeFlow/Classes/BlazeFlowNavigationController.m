@@ -10,7 +10,6 @@
 #import "BlazeFlow.h"
 #import "BlazeFlowTableViewController.h"
 #import "BlazeFlowTree.h"
-#import "UIView+SimpleAnimations.h"
 
 @interface BlazeFlowNavigationController () <UINavigationControllerDelegate>
 
@@ -32,10 +31,10 @@
         [weakSelf pushNextBlazeState];
     };
     self.blazeFlow.nextOnLastState = ^{
-        [self nextOnLastState];
+        [weakSelf nextOnLastState];
     };
     self.blazeFlow.previousOnFirstState = ^{
-        [self previousOnFirstState];
+        [weakSelf previousOnFirstState];
     };
     self = [super initWithRootViewController:vc];
     if(self) {
@@ -196,7 +195,10 @@
                     }
                     
                     [[[UIApplication sharedApplication] keyWindow] addSubview:self.pageControl];
-                    [self.pageControl showWithDuration:duration];
+                    self.pageControl.hidden = false;
+                    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                        self.pageControl.alpha = 1.0f;
+                    } completion:nil];
                 }
                 else if(!self.pageControl.superview) {
                     NSTimeInterval duration = 0.225;
@@ -205,14 +207,21 @@
                     }
                     
                     [[[UIApplication sharedApplication] keyWindow] addSubview:self.pageControl];
-                    [self.pageControl showWithDuration:duration];
+                    self.pageControl.hidden = false;
+                    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                        self.pageControl.alpha = 1.0f;
+                    } completion:nil];
+
                 }
             } else {
                 NSTimeInterval duration = 0.225;
                 if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(blazeFlowNavigationControllerAnimationDurationForPageControl)]) {
                     duration = [self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerAnimationDurationForPageControl];
                 }
-                [self.pageControl hideWithDuration:duration completion:^(BOOL finished) {
+                [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                    self.pageControl.alpha = 0.0f;
+                } completion:^(BOOL finished) {
+                    self.pageControl.hidden = true;
                     [self.pageControl removeFromSuperview];
                 }];
             }
