@@ -6,7 +6,7 @@
 //  Copyright © 2017 Roy Derks. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class BlazeFlow;
 

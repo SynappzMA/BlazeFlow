@@ -6,7 +6,7 @@
 //  Copyright © 2016 Synappz BV. All rights reserved.
 //
 
-#import "BlazeTableViewController.h"
+@import Blaze;
 
 @class BlazeFlow;
 

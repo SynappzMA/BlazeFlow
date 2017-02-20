@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
+use_frameworks!
 
 target 'BlazeFlow_Login' do
     pod 'Blaze'
@@ -10,5 +11,9 @@ target 'BlazeFlow_Simple' do
 end
 
 target 'BlazeFlow_Tree' do
+    pod 'Blaze'
+end
+
+target 'BlazeFlow_Navigation' do
     pod 'Blaze'
 end
