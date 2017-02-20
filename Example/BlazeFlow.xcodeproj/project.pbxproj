@@ -102,6 +102,10 @@
 		B08689B61E1D402A0014B21D /* TreeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689AA1E1D3FFC0014B21D /* TreeFlow.m */; };
 		B08689B71E1D402D0014B21D /* BlazeFlowTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689A61E1D3CC90014B21D /* BlazeFlowTree.m */; };
 		B08689B81E1D402E0014B21D /* BlazeFlowTree.m in Sources */ = {isa = PBXBuildFile; fileRef = B08689A61E1D3CC90014B21D /* BlazeFlowTree.m */; };
+		B0AA7B221E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA7B211E5AC8900005DF8E /* NavbasedNavigationController.m */; };
+		B0AA7B231E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA7B211E5AC8900005DF8E /* NavbasedNavigationController.m */; };
+		B0AA7B241E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA7B211E5AC8900005DF8E /* NavbasedNavigationController.m */; };
+		B0AA7B251E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA7B211E5AC8900005DF8E /* NavbasedNavigationController.m */; };
 		B0CF2B861DE836D8004FC2C4 /* BlazeFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */; };
 		B0CF2B981DEA0081004FC2C4 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2B971DEA0081004FC2C4 /* Launch.xib */; };
 		B0CF2BA91DEA02C8004FC2C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BAB1DEA02C8004FC2C4 /* Localizable.strings */; };
@@ -152,10 +156,6 @@
 		B0E7E39F1E3C8DA4004444F5 /* CardTopSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */; };
 		B0E7E3A01E3C8DA4004444F5 /* CardButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC41DEA125F004FC2C4 /* CardButtonTableViewCell.xib */; };
 		B0E7E3A11E3C8DA4004444F5 /* CardTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF2BC71DEA125F004FC2C4 /* CardTextFieldTableViewCell.xib */; };
-		B0E7E3B61E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
-		B0E7E3B71E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
-		B0E7E3B81E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
-		B0E7E3B91E3CADC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */; };
 		D019FC4B4368B444846835F1 /* libPods-BlazeFlow_Simple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F34757F59CE30E22BC939CE /* libPods-BlazeFlow_Simple.a */; };
 		F9BCEB77A9F47B4EB1A18A39 /* libPods-BlazeFlow_Tree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4201AD36C137AAA3BBA6E1C6 /* libPods-BlazeFlow_Tree.a */; };
 /* End PBXBuildFile section */
@@ -209,6 +209,8 @@
 		B08689AC1E1D400A0014B21D /* TreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewController.h; sourceTree = "<group>"; };
 		B08689AD1E1D400A0014B21D /* TreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewController.m; sourceTree = "<group>"; };
 		B08689AF1E1D401C0014B21D /* Main_tree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_tree.storyboard; sourceTree = "<group>"; };
+		B0AA7B201E5AC8900005DF8E /* NavbasedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavbasedNavigationController.h; sourceTree = "<group>"; };
+		B0AA7B211E5AC8900005DF8E /* NavbasedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavbasedNavigationController.m; sourceTree = "<group>"; };
 		B0CF2B841DE836D8004FC2C4 /* BlazeFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlow.h; sourceTree = "<group>"; };
 		B0CF2B851DE836D8004FC2C4 /* BlazeFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlow.m; sourceTree = "<group>"; };
 		B0CF2B971DEA0081004FC2C4 /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Launch.xib; sourceTree = "<group>"; };
@@ -230,8 +232,6 @@
 		B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTopSection.xib; sourceTree = "<group>"; };
 		B0E7E3A71E3C8DA4004444F5 /* BlazeFlow_Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E7E3A81E3C8DA5004444F5 /* BlazeFlow_Tree copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BlazeFlow_Tree copy-Info.plist"; path = "/Users/Roy/Documents/SourceTree/BlazeFlow/Example/BlazeFlow_Tree copy-Info.plist"; sourceTree = "<absolute>"; };
-		B0E7E3B41E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlazeFlowNavigationControllerConfiguraton.h; sourceTree = "<group>"; };
-		B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlazeFlowNavigationControllerConfiguraton.m; sourceTree = "<group>"; };
 		BEE705F7EB61DFC747CD3382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E7F8DD028440AF3333C888F7 /* libPods-BlazeFlow_Login.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlazeFlow_Login.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -407,8 +407,6 @@
 				B027A28A1E0A4CC8007703B9 /* BlazeFlowViewController.m */,
 				B0664D1B1E3942E3000DF194 /* BlazeFlowNavigationController.h */,
 				B0664D1C1E3942E3000DF194 /* BlazeFlowNavigationController.m */,
-				B0E7E3B41E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.h */,
-				B0E7E3B51E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m */,
 			);
 			name = BlazeFlow;
 			path = ../BlazeFlow/Classes;
@@ -444,6 +442,8 @@
 			children = (
 				B054F90D1E3CC89A0047938C /* NavBasedTableViewController.h */,
 				B054F90E1E3CC89A0047938C /* NavBasedTableViewController.m */,
+				B0AA7B201E5AC8900005DF8E /* NavbasedNavigationController.h */,
+				B0AA7B211E5AC8900005DF8E /* NavbasedNavigationController.m */,
 			);
 			name = Navbased;
 			sourceTree = "<group>";
@@ -868,9 +868,9 @@
 				B027A28F1E0A537D007703B9 /* BlazeFlowViewController.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				B086897A1E1D26CF0014B21D /* SimpleFlowViewController.m in Sources */,
-				B0E7E3B71E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B0CF2BB51DEA11E4004FC2C4 /* LoginViewController.m in Sources */,
 				B054F90F1E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
+				B0AA7B221E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */,
 				B08689AB1E1D3FFC0014B21D /* TreeFlow.m in Sources */,
 				B08689AE1E1D400A0014B21D /* TreeViewController.m in Sources */,
 				B0CF2BC01DEA120D004FC2C4 /* UIView+SimpleAnimations.m in Sources */,
@@ -893,9 +893,9 @@
 				B086894E1E1D067E0014B21D /* AppDelegate.m in Sources */,
 				B08689781E1D263A0014B21D /* SimpleFlowViewController.m in Sources */,
 				B086894F1E1D067E0014B21D /* LoginViewController.m in Sources */,
-				B0E7E3B81E3CADC4004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B08689501E1D067E0014B21D /* UIView+SimpleAnimations.m in Sources */,
 				B054F9101E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
+				B0AA7B231E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */,
 				B08689B71E1D402D0014B21D /* BlazeFlowTree.m in Sources */,
 				B08689B51E1D40290014B21D /* TreeFlow.m in Sources */,
 				B08689721E1D0E910014B21D /* SimpleFlow.m in Sources */,
@@ -918,9 +918,9 @@
 				B08689841E1D3C960014B21D /* AppDelegate.m in Sources */,
 				B08689851E1D3C960014B21D /* SimpleFlowViewController.m in Sources */,
 				B08689861E1D3C960014B21D /* LoginViewController.m in Sources */,
-				B0E7E3B91E3CADC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B08689871E1D3C960014B21D /* UIView+SimpleAnimations.m in Sources */,
 				B054F9111E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
+				B0AA7B241E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */,
 				B08689B81E1D402E0014B21D /* BlazeFlowTree.m in Sources */,
 				B08689B61E1D402A0014B21D /* TreeFlow.m in Sources */,
 				B08689881E1D3C960014B21D /* SimpleFlow.m in Sources */,
@@ -944,8 +944,8 @@
 				B0E7E3831E3C8DA4004444F5 /* SimpleFlowViewController.m in Sources */,
 				B0E7E3841E3C8DA4004444F5 /* LoginViewController.m in Sources */,
 				B0E7E3851E3C8DA4004444F5 /* UIView+SimpleAnimations.m in Sources */,
-				B0E7E3B61E3C9DC5004444F5 /* BlazeFlowNavigationControllerConfiguraton.m in Sources */,
 				B054F9121E3CC89A0047938C /* NavBasedTableViewController.m in Sources */,
+				B0AA7B251E5AC8900005DF8E /* NavbasedNavigationController.m in Sources */,
 				B0E7E3861E3C8DA4004444F5 /* BlazeFlowTree.m in Sources */,
 				B0E7E3871E3C8DA4004444F5 /* TreeFlow.m in Sources */,
 				B0E7E3881E3C8DA4004444F5 /* SimpleFlow.m in Sources */,

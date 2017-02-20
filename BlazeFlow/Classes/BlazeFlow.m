@@ -9,7 +9,6 @@
 #import "BlazeFlow.h"
 #import "BlazeFlowTableViewController.h"
 #import "BlazeTableViewController.h"
-#import "BlazeFlowNavigationControllerConfiguraton.h"
 
 
 @interface BlazeFlow()

@@ -9,6 +9,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 #import "BlazeTableViewCell.h"
+#import "BlazeFieldProcessor.h"
 
 @implementation BlazeTableViewCell
 
@@ -19,13 +20,23 @@
     [super awakeFromNib];
 }
 
-#pragma mark - Selected
+#pragma mark - Selected/Highlighted
 
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+    
+    //Update selectedView if one is assigned
+    if(self.selectedView) {
+        self.selectedView.hidden = !highlighted;
+    }
 }
 
 #pragma mark - Update
@@ -253,20 +264,6 @@
     return toolBar;
 }
 
--(IBAction)nextField:(UIBarButtonItem *)sender
-{
-    if(self.nextField) {
-        self.nextField();
-    }
-}
-
--(IBAction)previousField:(UIBarButtonItem *)sender
-{
-    if(self.previousField) {
-        self.previousField();
-    }
-}
-
 -(IBAction)doneField:(UIBarButtonItem *)sender
 {
     [self endEditing:TRUE];
@@ -275,5 +272,107 @@
     }
 }
 
+-(void)nextField:(UIBarButtonItem *)sender
+{
+    if(self.fieldProcessors.count>1) {
+        NSUInteger index = [self indexForCurrentFirstResponder];
+        if(index != NSNotFound) {
+            if(index+1 < self.fieldProcessors.count) {
+                BlazeFieldProcessor *nextProcessor = self.fieldProcessors[index+1];
+                [nextProcessor.field becomeFirstResponder];
+                return;
+            }
+        }
+    }
+    if(self.nextField) {
+        self.nextField();
+    }
+}
+
+-(void)previousField:(UIBarButtonItem *)sender
+{
+    if(self.fieldProcessors.count>1) {
+        NSUInteger index = [self indexForCurrentFirstResponder];
+        if(index != NSNotFound) {
+            if((int)index-1 >= 0) {
+                BlazeFieldProcessor *nextProcessor = self.fieldProcessors[index-1];
+                [nextProcessor.field becomeFirstResponder];
+                return;
+            }
+        }
+    }
+    
+    if(self.previousField) {
+        self.previousField();
+    }
+}
+
+#pragma mark - FieldProcessors
+
+-(void)setupFieldProcessorsWithMainField:(id)mainField processorClass:(Class)processorClass
+{
+    if(!mainField) {
+        NSLog(@"Blaze warning - setup processor called but no mainfield attached...");
+        return;
+    }
+    
+    //Fields
+    NSMutableArray *fields = [NSMutableArray new];    
+    [fields addObject:mainField];
+    if(self.additionalFields.count) {
+        [fields addObjectsFromArray:self.additionalFields];
+    }
+ 
+    //Rows
+    NSMutableArray *rows = [NSMutableArray new];
+    [rows addObject:self.row];
+    [rows addObjectsFromArray:self.row.additionalRows];
+    
+    //First the main textfield
+    for(int i = 0; i < rows.count; i++) {
+        BlazeFieldProcessor *processor;
+        if(i < self.fieldProcessors.count) {
+            //Get it
+            processor = self.fieldProcessors[i];
+        }
+        else {
+            //Check
+            if(i >= fields.count) {
+                break;
+            }
+            
+            //Get row
+            processor = [processorClass new];
+            processor.field = fields[i];
+            
+            //Add it
+            [self.fieldProcessors addObject:processor];
+        }
+        
+        //Set cell
+        processor.row = rows[i];
+        processor.cell = self;
+        [processor update];
+    }
+}
+
+-(NSUInteger)indexForCurrentFirstResponder
+{
+    for(int i = 0; i < self.fieldProcessors.count; i++) {
+        BlazeFieldProcessor *processor = self.fieldProcessors[i];
+        if([processor.field isFirstResponder]) {
+            return i;
+        }
+    }
+    return NSNotFound;
+}
+
+-(NSMutableArray *)fieldProcessors
+{
+    if(!_fieldProcessors) {
+        _fieldProcessors = [NSMutableArray new];
+    }
+    return _fieldProcessors;
+}
 
 @end

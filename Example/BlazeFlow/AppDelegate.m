@@ -11,39 +11,38 @@
 #import "BlazeFlowTree.h"
 #import "TreeFlow.h"
 #import "BlazeFlowNavigationController.h"
-#import "BlazeFlowNavigationControllerConfiguraton.h"
 #import "LoginFlow.h"
+#import "NavbasedNavigationController.h"
+
+@interface AppDelegate()
+
+@property(nonatomic,strong) NavbasedNavigationController *navCon;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
 #ifdef NAVBASED
-    //    TreeFlow *treeFlow = [TreeFlow new];
-    //    treeFlow.currentState = TreeFlowState11;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     LoginFlow *flow = [LoginFlow new];
     flow.currentState = LoginStateLogin;
-    
-    BlazeFlowNavigationController* navCon = [[BlazeFlowNavigationController alloc] initWithBlazeFlow:flow];
-    navCon.blazeFlowTableViewControllerSubclass = [NavBasedTableViewController class];
-    
-    BlazeFlowNavigationControllerConfiguraton *conf = [BlazeFlowNavigationControllerConfiguraton new];
-    conf.showPageControl = true;
-    conf.pageControlAmountOfPages = 5;
-    conf.showRightBarItem = true;
-    conf.rightBarItemTitle = @"Close";
-    
-    __weak typeof(navCon) weakNavCon = navCon;
-    conf.rightBarItemAction = ^{
-        //[weakNavCon dismissViewControllerAnimated:true completion:nil];
+    flow.numberOfStates = LoginStateDone;
+    flow.blazeFlowTableViewControllerSubclass = [NavBasedTableViewController class];
+    flow.currentStateChanged = ^(NSInteger state) {
+        NSLog(@"%lu", state);
     };
     
-    flow.blazeFlowNavigationControllerConfiguraton = conf;
-    
-    [self.window setRootViewController:navCon];
-    // Override point for customization after application launch.
+    self.navCon = [[NavbasedNavigationController alloc] initWithBlazeFlow:flow];
+    [self.window setRootViewController:self.navCon];
+    [self.window makeKeyAndVisible];
+    //    TreeFlow *treeFlow = [TreeFlow new];
+    //    treeFlow.currentState = TreeFlowState11;
 #endif
+    // Override point for customization after application launch.
+
     return YES;
 }
 
