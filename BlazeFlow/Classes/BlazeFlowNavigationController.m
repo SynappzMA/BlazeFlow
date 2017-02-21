@@ -14,6 +14,7 @@
 @interface BlazeFlowNavigationController () <UINavigationControllerDelegate>
 
 @property(nonatomic,assign) NSUInteger currentPageIndex;
+@property(nonatomic,strong) UIView* customBottomView;
 
 @end
 
@@ -77,6 +78,7 @@
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [self configureNavbarButtons:navigationController viewController:viewController];
     [self configurePageControl:navigationController viewController:viewController];
+    [self customBottomView:navigationController viewController:viewController];
 }
 
 -(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -188,6 +190,9 @@
                     CGPoint center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMaxY(self.view.bounds)-CGRectGetHeight(_pageControl.bounds));
                     self.pageControl.center = center;
                     self.pageControl.alpha = 0.0f;
+                    if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(customizePageControl:)]) {
+                        [self.blazeFlowNavigationControllerDelegate customizePageControl:self.pageControl];
+                    }
                     
                     NSTimeInterval duration = 0.225;
                     if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(blazeFlowNavigationControllerAnimationDurationForPageControl)]) {
@@ -195,10 +200,7 @@
                     }
                     
                     [[[UIApplication sharedApplication] keyWindow] addSubview:self.pageControl];
-                    self.pageControl.hidden = false;
-                    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                        self.pageControl.alpha = 1.0f;
-                    } completion:nil];
+                    [self showWithDuration:self.pageControl duration:duration completion:nil];
                 }
                 else if(!self.pageControl.superview) {
                     NSTimeInterval duration = 0.225;
@@ -207,10 +209,7 @@
                     }
                     
                     [[[UIApplication sharedApplication] keyWindow] addSubview:self.pageControl];
-                    self.pageControl.hidden = false;
-                    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                        self.pageControl.alpha = 1.0f;
-                    } completion:nil];
+                    [self showWithDuration:self.pageControl duration:duration completion:nil];
 
                 }
             } else {
@@ -218,10 +217,7 @@
                 if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(blazeFlowNavigationControllerAnimationDurationForPageControl)]) {
                     duration = [self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerAnimationDurationForPageControl];
                 }
-                [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                    self.pageControl.alpha = 0.0f;
-                } completion:^(BOOL finished) {
-                    self.pageControl.hidden = true;
+                [self hideWithDuration:self.pageControl duration:duration completion:^(BOOL finished) {
                     [self.pageControl removeFromSuperview];
                 }];
             }
@@ -232,6 +228,53 @@
         if(self.pageControl) {
             [self.pageControl removeFromSuperview];
             _pageControl = nil;
+        }
+    }
+}
+
+-(Class)pageControlClass
+{
+    if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(classForPageControl)])
+    {
+        return [self.blazeFlowNavigationControllerDelegate classForPageControl];
+    }
+    return [UIPageControl class];
+}
+
+-(void)customBottomView:(UINavigationController*)navigationController viewController:(UIViewController*)viewController
+{
+    if(![self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(customBottomViewForState:)]) {
+        return;
+    }
+    NSInteger currentState = self.blazeFlow.currentState;
+    UIView *customView = [self.blazeFlowNavigationControllerDelegate customBottomViewForState:currentState];
+    if(customView) {
+        if(![self.customBottomView isEqual:customView] && self.customBottomView) {
+            NSTimeInterval duration = 0.225;
+            if(self.customBottomView) {
+                [self hideWithDuration:self.customBottomView duration:duration completion:^(BOOL finished) {
+                    [self.customBottomView removeFromSuperview];
+                    
+                    self.customBottomView = customView;
+                    customView.alpha = 0.0;
+                    [[[UIApplication sharedApplication] keyWindow] addSubview:customView];
+                    [self showWithDuration:customView duration:duration completion:nil];
+                }];
+            }
+        } else {
+            NSTimeInterval duration = 0.225;
+            self.customBottomView = customView;
+            self.customBottomView.alpha = 0.0;
+            [[[UIApplication sharedApplication] keyWindow] addSubview:self.customBottomView];
+            [self showWithDuration:self.customBottomView duration:duration completion:nil];
+        }
+    } else {
+        if(self.customBottomView) {
+            NSTimeInterval duration = 0.225;
+            [self hideWithDuration:self.customBottomView duration:duration completion:^(BOOL finished) {
+                [self.customBottomView removeFromSuperview];
+                self.customBottomView = nil;
+            }];
         }
     }
 }
@@ -334,5 +377,28 @@
     //To override
     [self dismissViewControllerAnimated:true completion:nil];
 }
+
+#pragma mark - Util
+
+-(void)showWithDuration:(UIView*)view duration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
+{
+    view.hidden = false;
+    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        view.alpha = 1.0f;
+    } completion:completion];
+}
+
+-(void)hideWithDuration:(UIView*)view duration:(CGFloat)duration completion:(void (^)(BOOL finished))completion
+{
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        view.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        view.hidden = true;
+        if(completion) {
+            completion(finished);
+        }
+    }];
+}
+
 
 @end
