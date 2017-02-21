@@ -27,6 +27,7 @@
     self.blazeFlow = blazeFlow;
     BlazeFlowTableViewController *vc = [self blazeFlowTableViewController];
     
+    
     __weak typeof(self) weakSelf = self;
     self.blazeFlow.stateFinished = ^{
         [weakSelf pushNextBlazeState];
@@ -335,7 +336,7 @@
 -(BlazeFlowTableViewController*)blazeFlowTableViewController
 {
     BlazeFlowTableViewController *blazeFlowTableViewController = [[self.blazeFlow.blazeFlowTableViewControllerSubclass alloc] initWithStyle:UITableViewStylePlain];
-    blazeFlowTableViewController.blazeFlow = self.blazeFlow;
+    self.blazeFlow.blazeFlowTableViewController = blazeFlowTableViewController;
     return blazeFlowTableViewController;
 }
 
