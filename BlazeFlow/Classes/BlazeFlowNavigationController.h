@@ -16,6 +16,7 @@
 //Show/hide
 -(BOOL)blazeFlowNavigationControllerShouldShowRightBarItemForState:(NSInteger)state;
 -(BOOL)blazeFlowNavigationControllerShouldShowLeftBarItemForState:(NSInteger)state;
+-(BOOL)blazeFlowNavigationControllerShouldHideBackLeftBarItemForState:(NSInteger)state;
 -(BOOL)blazeFlowNavigationControllerShouldShowPageControlForState:(NSInteger)state;
 
 //Titles

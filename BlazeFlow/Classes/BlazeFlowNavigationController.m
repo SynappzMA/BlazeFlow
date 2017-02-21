@@ -77,6 +77,7 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    self.blazeFlow.blazeFlowTableViewController = viewController;
     [self configureNavbarButtons:navigationController viewController:viewController];
     [self configurePageControl:navigationController viewController:viewController];
     [self customBottomView:navigationController viewController:viewController];
@@ -165,6 +166,8 @@
                     //If no title or image is set, remove the button.
                     viewController.navigationItem.leftBarButtonItem = nil;
                 }
+            } else if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(blazeFlowNavigationControllerShouldHideBackLeftBarItemForState:)]) {
+                [self.navigationItem setHidesBackButton:[self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerShouldHideBackLeftBarItemForState:currentState] animated:false];
             } else {
                 viewController.navigationItem.leftBarButtonItem = nil;
             }
