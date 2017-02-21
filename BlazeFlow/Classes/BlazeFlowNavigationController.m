@@ -167,7 +167,7 @@
                     viewController.navigationItem.leftBarButtonItem = nil;
                 }
             } else if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(blazeFlowNavigationControllerShouldHideBackLeftBarItemForState:)]) {
-                [self.navigationItem setHidesBackButton:[self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerShouldHideBackLeftBarItemForState:currentState] animated:false];
+                [viewController.navigationItem setHidesBackButton:[self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerShouldHideBackLeftBarItemForState:currentState] animated:false];
             } else {
                 viewController.navigationItem.leftBarButtonItem = nil;
             }
