@@ -77,7 +77,7 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    self.blazeFlow.blazeFlowTableViewController = viewController;
+    self.blazeFlow.blazeFlowTableViewController = (BlazeFlowTableViewController*)viewController;
     [self configureNavbarButtons:navigationController viewController:viewController];
     [self configurePageControl:navigationController viewController:viewController];
     [self customBottomView:navigationController viewController:viewController];
