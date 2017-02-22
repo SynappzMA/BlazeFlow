@@ -46,14 +46,10 @@
     return self;
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    if(self.pageControl) {
-        [UIView animateWithDuration:0.250 animations:^{
-            self.pageControl.alpha = 1.0f;
-        }];
-    }
+    [super viewWillAppear:animated];
+    [self configurePageControl:self.navigationController viewController:self.navigationController.visibleViewController];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -85,7 +81,9 @@
 
 -(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    if([[UIApplication sharedApplication] isIgnoringInteractionEvents]) {
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    }
 }
 
 -(void)configureNavbarButtons:(UINavigationController*)navigationController viewController:(UIViewController*)viewController
@@ -214,7 +212,7 @@
                     
                     [[[UIApplication sharedApplication] keyWindow] addSubview:self.pageControl];
                     [self showWithDuration:self.pageControl duration:duration completion:nil];
-
+                    
                 }
             } else {
                 NSTimeInterval duration = 0.225;
@@ -330,7 +328,7 @@
     else if(![self.blazeFlow isKindOfClass:[BlazeFlowTree class]]){
         self.blazeFlow.currentState++;
     }
-
+    
     [self pushViewController:[self blazeFlowTableViewController] animated:true];
 }
 

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = 'BlazeFlow'
 s.platform         = :ios
-s.version          = '1.1.4'
+s.version          = '1.1.5'
 s.summary          = 'Blazingly fast application flow wrapper for the Blaze framework.'
 s.description      = 'Blazingly fast wrapper for the Blaze framework for providing, for example a login or setup flow.'
 s.homepage         = 'https://github.com/rajderks/BlazeFlow'
