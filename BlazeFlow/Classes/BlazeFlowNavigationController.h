@@ -32,8 +32,10 @@
 //Pagecontrol
 -(NSInteger)blazeFlowNavigationControllerAmountOfPageForPageControl;
 -(NSTimeInterval)blazeFlowNavigationControllerAnimationDurationForPageControl;
+-(NSInteger)blazeFlowNavigationControllerCurrentPageIndex;
 -(void)customizePageControl:(UIPageControl*)pageControl;
 -(Class)classForPageControl;
+
 
 //Custom view
 -(UIView*)customBottomViewForState:(NSInteger)state;

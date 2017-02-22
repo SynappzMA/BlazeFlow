@@ -223,7 +223,11 @@
                     [self.pageControl removeFromSuperview];
                 }];
             }
-            self.pageControl.currentPage = self.currentPageIndex;
+            if([self.blazeFlowNavigationControllerDelegate respondsToSelector:@selector(blazeFlowNavigationControllerCurrentPageIndex)]) {
+                self.pageControl.currentPage = [self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerCurrentPageIndex];
+            } else {
+                self.pageControl.currentPage = self.currentPageIndex;
+            }
         }
     } else {
         //If there was a pageControl, remove and nullify
