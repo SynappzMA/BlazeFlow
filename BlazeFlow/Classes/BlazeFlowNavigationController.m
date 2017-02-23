@@ -15,6 +15,8 @@
 
 @property(nonatomic,assign) NSUInteger currentPageIndex;
 @property(nonatomic,strong) UIView* customBottomView;
+@property(nonatomic,strong) UIBarButtonItem *rightBarItem;
+@property(nonatomic,strong) UIBarButtonItem *leftBarItem;
 
 @end
 
@@ -95,7 +97,7 @@
             BOOL show = [self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerShouldShowRightBarItemForState:currentState];
             if(show) {
                 //Right item properties
-                UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
+                UIBarButtonItem *item = self.rightBarItem?self.rightBarItem:[[UIBarButtonItem alloc] init];
                 item.action = @selector(rightBarItemAction);
                 NSString* title = nil;
                 NSString* imageName = nil;
@@ -115,12 +117,13 @@
                     } else {
                         item.title = title;
                     }
-                } else if(title.length) {
+                } else if(title.length && ![item.title isEqualToString:title]) {
                     item.title = title;
                 }
                 //If one of them is set, show item.
-                if(item.title.length || item.image) {
+                if(item.title.length || item.image && ![self.rightBarItem isEqual:item]) {
                     viewController.navigationItem.rightBarButtonItem = item;
+                    self.rightBarItem = item;
                 } else {
                     //If no title or image is set, remove the button.
                     viewController.navigationItem.rightBarButtonItem = nil;
@@ -134,7 +137,7 @@
             BOOL show = [self.blazeFlowNavigationControllerDelegate blazeFlowNavigationControllerShouldShowLeftBarItemForState:currentState];
             if(show) {
                 //Left item properties
-                UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
+                UIBarButtonItem *item = self.leftBarItem?self.leftBarItem:[[UIBarButtonItem alloc] init];
                 item.action = @selector(leftBarItemAction);
                 NSString* title = nil;
                 NSString* imageName = nil;
@@ -158,7 +161,7 @@
                     item.title = title;
                 }
                 //If one of them is set, show item.
-                if(item.title.length || item.image) {
+                if(item.title.length || item.image && ![self.leftBarItem isEqual:item]) {
                     viewController.navigationItem.leftBarButtonItem = item;
                 } else {
                     //If no title or image is set, remove the button.
