@@ -121,7 +121,7 @@
                     item.title = title;
                 }
                 //If one of them is set, show item.
-                if(item.title.length || item.image && ![self.rightBarItem isEqual:item]) {
+                if((item.title.length || item.image) && ![self.rightBarItem isEqual:item]) {
                     viewController.navigationItem.rightBarButtonItem = item;
                     self.rightBarItem = item;
                 } else {
@@ -161,7 +161,7 @@
                     item.title = title;
                 }
                 //If one of them is set, show item.
-                if(item.title.length || item.image && ![self.leftBarItem isEqual:item]) {
+                if((item.title.length || item.image) && ![self.leftBarItem isEqual:item]) {
                     viewController.navigationItem.leftBarButtonItem = item;
                 } else {
                     //If no title or image is set, remove the button.
