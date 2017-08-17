@@ -16,7 +16,7 @@
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6CC2CB23B8DF086AFC63FF83 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		6CC2CB23B8DF086AFC63FF83 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B00FF1451E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
 		B00FF1461E1E3EF70046621C /* BlazeFlow_Simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = B00FF1431E1E3EF70046621C /* BlazeFlow_Simple.plist */; };
@@ -234,7 +234,6 @@
 		B0CF2BC81DEA125F004FC2C4 /* CardTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTitleTableViewCell.xib; sourceTree = "<group>"; };
 		B0CF2BC91DEA125F004FC2C4 /* CardTopSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTopSection.xib; sourceTree = "<group>"; };
 		B0E7E3A71E3C8DA4004444F5 /* BlazeFlow_Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlazeFlow_Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0E7E3A81E3C8DA5004444F5 /* BlazeFlow_Tree copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BlazeFlow_Tree copy-Info.plist"; path = "/Users/Roy/Documents/SourceTree/BlazeFlow/Example/BlazeFlow_Tree copy-Info.plist"; sourceTree = "<absolute>"; };
 		BEE705F7EB61DFC747CD3382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF35B540B5F1A42860BB30C1 /* Pods_BlazeFlow_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlazeFlow_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F423F3F9A4DD0D885851979A /* Pods-BlazeFlow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlazeFlow_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlazeFlow_Example/Pods-BlazeFlow_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,7 +270,7 @@
 				B086898C1E1D3C960014B21D /* CoreGraphics.framework in Frameworks */,
 				B086898D1E1D3C960014B21D /* UIKit.framework in Frameworks */,
 				B086898E1E1D3C960014B21D /* Foundation.framework in Frameworks */,
-				6CC2CB23B8DF086AFC63FF83 /* BuildFile in Frameworks */,
+				6CC2CB23B8DF086AFC63FF83 /* (null) in Frameworks */,
 				32A5481DD2408054D2CA67A4 /* Pods_BlazeFlow_Tree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +298,6 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				C005A9309D91211B1D3506A4 /* Pods */,
-				B0E7E3A81E3C8DA5004444F5 /* BlazeFlow_Tree copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
